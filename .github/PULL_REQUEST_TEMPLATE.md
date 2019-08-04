@@ -4,7 +4,7 @@ Thanks for contributing to perf-tooling!
 
 Please make sure that you followed the following conventions:
 
-- [ ] your commits follow the [gitmoji](https://gitmoji.carloscuesta.me/) convention 
+- [ ] your commits follow the [gitmoji](https://gitmoji.carloscuesta.me/) convention
 - [ ] the build on travis succeeds
 - [ ] your changes align with the rules in the [CONTRIBUTING.MD](./CONTRIBUTING.md)
 
