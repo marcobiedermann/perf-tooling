@@ -24,7 +24,7 @@ export const INDEX = {
 };
 
 export const SLIDES = {
-  name: 'SLIDES',
+  name: 'Slides',
   path: '/slides',
 };
 
