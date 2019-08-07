@@ -2,6 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as routes from '../../constants/routes';
+import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
@@ -41,11 +42,9 @@ const Layout = ({ children }) => {
         <Main>
           <Grid>{children}</Grid>
         </Main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer>
+          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </Footer>
       </div>
     </>
   );
