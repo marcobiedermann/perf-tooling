@@ -8,6 +8,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Grid from '../Grid';
 import Header from '../Header';
 
 const Layout = ({ children }) => {
@@ -25,7 +26,9 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main>{children}</main>
+        <main>
+          <Grid>{children}</Grid>
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
