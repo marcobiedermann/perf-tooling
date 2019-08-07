@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Grid from '../Grid';
 import Header from '../Header';
+import Main from '../Main';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,9 +27,9 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main>
+        <Main>
           <Grid>{children}</Grid>
-        </main>
+        </Main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
