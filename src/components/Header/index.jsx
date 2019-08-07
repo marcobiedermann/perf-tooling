@@ -1,6 +1,8 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import * as routes from '../../constants/routes';
+import Navigation from '../Navigation';
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -8,6 +10,18 @@ const Header = ({ siteTitle }) => (
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
+      <Navigation
+        routes={[
+          routes.INDEX,
+          routes.TOOLS,
+          routes.ARTICLES,
+          routes.VIDEOS,
+          routes.SLIDES,
+          routes.BOOKS,
+          routes.COURSES,
+          routes.AUDITS,
+        ]}
+      />
     </div>
   </header>
 );
