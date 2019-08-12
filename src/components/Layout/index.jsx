@@ -22,28 +22,30 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header>
-        <h1>
-          <Link to="/">{data.site.siteMetadata.title}</Link>
-        </h1>
-        <Navigation
-          routes={[
-            routes.INDEX,
-            routes.TOOLS,
-            routes.ARTICLES,
-            routes.VIDEOS,
-            routes.SLIDES,
-            routes.BOOKS,
-            routes.COURSES,
-            routes.AUDITS,
-          ]}
-        />
+        <Grid>
+          <h1>
+            <Link to="/">{data.site.siteMetadata.title}</Link>
+          </h1>
+          <Navigation
+            routes={[
+              routes.INDEX,
+              routes.TOOLS,
+              routes.ARTICLES,
+              routes.VIDEOS,
+              routes.SLIDES,
+              routes.BOOKS,
+              routes.COURSES,
+              routes.AUDITS,
+            ]}
+          />
+        </Grid>
       </Header>
       <div>
-        <Main>
-          <Grid>{children}</Grid>
-        </Main>
+        <Main>{children}</Main>
         <Footer>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Grid>
+            © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </Grid>
         </Footer>
       </div>
     </>
