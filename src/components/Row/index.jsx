@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from './style.module.css';
 
 const Row = props => {
   const { children } = props;
 
-  return <div>{children}</div>;
+  return <div className={styles.row}>{children}</div>;
 };
 
 Row.propTypes = {
