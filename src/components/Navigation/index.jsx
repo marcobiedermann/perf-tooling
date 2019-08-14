@@ -9,7 +9,7 @@ const Navigation = props => {
     <nav>
       <ul>
         {routes.map(route => (
-          <li>
+          <li key={route.path}>
             <Link to={route.path}>{route.name}</Link>
           </li>
         ))}
@@ -19,10 +19,12 @@ const Navigation = props => {
 };
 
 Navigation.propTypes = {
-  routes: PropTypes.arrayOf({
-    name: PropTypes.string,
-    path: PropTypes.string,
-  }),
+  routes: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      path: PropTypes.string,
+    }),
+  ),
 };
 
 Navigation.defaultProps = {
