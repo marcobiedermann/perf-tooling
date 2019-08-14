@@ -11,14 +11,7 @@
     "estimatedTime": "2.5 hours",
     "level": "beginner"
   },
-  "img": {
-    "src": {
-      "filename": "website-perf-bootcamp",
-      "types": ["jpg", "webp"]
-    },
-    "width": 277,
-    "height": 146
-  },
+  "img": "../../images/courses/website-perf-bootcamp.jpg",
   "isPaid": false,
   "tags": ["http", "network", "loading"],
   "url": "https://www.sitespeedbootcamp.com/"

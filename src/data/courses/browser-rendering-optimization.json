@@ -15,14 +15,7 @@
     "estimatedTime": "4 weeks",
     "level": "advanced"
   },
-  "img": {
-    "src": {
-      "filename": "browser-rendering",
-      "types": ["jpg", "webp"]
-    },
-    "width": 277,
-    "height": 170
-  },
+  "img": "../../images/courses/browser-rendering.jpg",
   "isPaid": false,
   "tags": ["60fps", "rendering", "optimisation"],
   "url": "https://www.udacity.com/course/browser-rendering-optimization--ud860"

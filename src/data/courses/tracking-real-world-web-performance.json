@@ -11,14 +11,7 @@
     "estimatedTime": "1.5 hours",
     "level": "beginner"
   },
-  "img": {
-    "src": {
-      "filename": "tracking-web-perf",
-      "types": ["png", "webp"]
-    },
-    "width": 277,
-    "height": 192
-  },
+  "img": "../../images/courses/tracking-web-perf.png",
   "isPaid": true,
   "tags": ["rum", "measuring", "synthetic"],
   "url": "https://www.pluralsight.com/courses/web-performance-tracking"

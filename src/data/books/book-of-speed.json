@@ -12,13 +12,6 @@
   },
   "url": "http://www.bookofspeed.com",
   "description": "The business, psychology and technology of high-performance web apps.",
-  "img": {
-    "src": {
-      "filename": "book-of-speed",
-      "types": ["jpg", "webp"]
-    },
-    "width": 200,
-    "height": 264
-  },
+  "img": "../../images/books/book-of-speed.jpg",
   "tags": ["network", "images", "performance"]
 }

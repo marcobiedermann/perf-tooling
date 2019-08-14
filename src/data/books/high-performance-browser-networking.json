@@ -12,13 +12,6 @@
   },
   "url": "http://shop.oreilly.com/product/0636920028048.do",
   "description": "How prepared are you to build fast and efficient web applications? This eloquent book provides what every web developer should know about the network, from fundamental limitations that affect performance to major innovations for building even more powerful browser applications—including HTTP 2.0 and XHR improvements, Server-Sent Events (SSE), WebSocket, and WebRTC.",
-  "img": {
-    "src": {
-      "filename": "high-performance-browser-networking",
-      "types": ["jpg", "webp"]
-    },
-    "width": 200,
-    "height": 262
-  },
+  "img": "../../images/books/high-performance-browser-networking.jpg",
   "tags": ["http", "network", "websocket"]
 }

@@ -11,14 +11,7 @@
     "estimatedTime": "2.75 hours",
     "level": "beginner"
   },
-  "img": {
-    "src": {
-      "filename": "wpt-deep-dive",
-      "types": ["png", "webp"]
-    },
-    "width": 277,
-    "height": 192
-  },
+  "img": "../../images/courses/wpt-deep-dive.png",
   "isPaid": true,
   "tags": ["webpagetest", "measuring", "optimisation"],
   "url": "https://www.pluralsight.com/courses/webpagetest-deep-dive"

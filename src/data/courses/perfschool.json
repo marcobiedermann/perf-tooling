@@ -11,14 +11,7 @@
     "estimatedTime": "4 hours",
     "level": "beginner"
   },
-  "img": {
-    "src": {
-      "filename": "perfschool",
-      "types": ["jpg", "webp"]
-    },
-    "width": 277,
-    "height": 215
-  },
+  "img": "../../images/courses/perfschool.jpg",
   "isPaid": false,
   "tags": ["budget", "measuring", "images", "fonts"],
   "url": "https://github.com/bevacqua/perfschool"

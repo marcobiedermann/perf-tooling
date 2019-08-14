@@ -11,14 +11,7 @@
     "estimatedTime": "1.6 hours",
     "level": "beginner"
   },
-  "img": {
-    "src": {
-      "filename": "performance-matters-optimizing-page-load",
-      "types": ["jpg", "webp"]
-    },
-    "width": 277,
-    "height": 192
-  },
+  "img": "../../images/courses/performance-matters-optimizing-page-load.jpg",
   "isPaid": true,
   "tags": ["critical", "measuring", "optimisation"],
   "url": "https://webdesign.tutsplus.com/courses/performance-matters-optimizing-page-load"
