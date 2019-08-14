@@ -4,10 +4,12 @@ module.exports = {
     description:
       'Perf Tooling Today lists a lot of tools, articles, videos, slides and courses to make the web faster. We cover resources to automize and monitore your workflow.',
     author: '@stefanjudis',
+    siteUrl: 'http://www.perf-tooling.today',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
