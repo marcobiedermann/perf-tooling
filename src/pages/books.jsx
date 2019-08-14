@@ -19,12 +19,11 @@ const BooksPage = () => {
               description
               id
               img {
-                height
-                src {
-                  filename
-                  types
+                childImageSharp {
+                  fixed(width: 200) {
+                    ...GatsbyImageSharpFixed_withWebp_noBase64
+                  }
                 }
-                width
               }
               name
               stats {

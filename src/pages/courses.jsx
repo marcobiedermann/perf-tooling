@@ -18,11 +18,11 @@ const CoursesPage = () => {
               date
               id
               img {
-                height
-                src {
-                  filename
+                childImageSharp {
+                  fixed(width: 277) {
+                    ...GatsbyImageSharpFixed_withWebp_noBase64
+                  }
                 }
-                width
               }
               isPaid
               name

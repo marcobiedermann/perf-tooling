@@ -1,3 +1,4 @@
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Tags from '../Tags';
@@ -18,7 +19,7 @@ const Book = props => {
       </h4>
       <p>{description}</p>
       <figure>
-        {img && <img src={`images/courses/${img.src.filename}.jpg`} alt={name} width={img.width} height={img.height} />}
+        <Img fixed={img.childImageSharp.fixed} />
       </figure>
       <ul>{stats && stats.length && <li>Length: {stats.length} Pages</li>}</ul>
       <Tags tags={tags} />
@@ -36,11 +37,9 @@ Book.propTypes = {
   date: PropTypes.string,
   description: PropTypes.string,
   img: PropTypes.shape({
-    height: PropTypes.number,
-    src: PropTypes.shape({
-      filename: PropTypes.string,
+    childImageSharp: PropTypes.shape({
+      fixed: PropTypes.shape(),
     }),
-    width: PropTypes.number,
   }),
   name: PropTypes.string,
   stats: PropTypes.shape({
