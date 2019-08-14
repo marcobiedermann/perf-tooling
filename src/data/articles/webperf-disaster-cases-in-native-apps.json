@@ -11,5 +11,5 @@
     "length": 840
   },
   "url": "http://calendar.perfplanet.com/2015/webperf-disaster-cases-in-native-apps/",
-  "tags": ["spof", "native"]
+  "tags": ["native", "spof"]
 }

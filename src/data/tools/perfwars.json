@@ -4,5 +4,5 @@
     "url": "http://perfwars.com/"
   },
   "description": "PerfWars is a fun and useful way to compare the website performance of two URLs.",
-  "tags": ["metrics", "analyze", "timings"]
+  "tags": ["analyze", "metrics", "timings"]
 }

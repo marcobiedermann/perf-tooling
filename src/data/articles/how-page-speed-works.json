@@ -10,6 +10,6 @@
   "stats": {
     "length": 1474
   },
-  "tags": ["pagespeed", "time-to-interactive", "monitoring"],
+  "tags": ["monitoring", "pagespeed", "time-to-interactive"],
   "url": "https://calibreapp.com/blog/how-pagespeed-works/"
 }

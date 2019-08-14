@@ -10,6 +10,6 @@
   "stats": {
     "length": 38
   },
-  "tags": ["monitoring", "loading"],
+  "tags": ["loading", "monitoring"],
   "url": "https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs"
 }

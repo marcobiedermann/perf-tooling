@@ -10,6 +10,6 @@
   "stats": {
     "length": 61
   },
-  "tags": ["css", "critical", "render-path"],
+  "tags": ["critical", "css", "render-path"],
   "url": "https://speakerdeck.com/patrickhamann/css-and-the-critical-path"
 }

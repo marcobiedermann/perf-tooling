@@ -7,5 +7,5 @@
     "url": "https://github.com/gobwas/gulp-sprite-generator"
   },
   "description": "Generates sprites from images referenced in a stylesheets. Updates references with the generated sprites and positions.",
-  "tags": ["images", "sprite", "generator", "css"]
+  "tags": ["css", "generator", "images", "sprite"]
 }

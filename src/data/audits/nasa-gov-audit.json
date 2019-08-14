@@ -10,5 +10,5 @@
   "date": "2016-11-11",
   "url": "https://github.com/perfs/audits/issues/7",
   "types": ["document"],
-  "tags": ["javascript", "rendering", "loading"]
+  "tags": ["javascript", "loading", "rendering"]
 }

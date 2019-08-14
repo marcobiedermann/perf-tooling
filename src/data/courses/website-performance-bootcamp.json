@@ -13,6 +13,6 @@
   },
   "img": "../../images/courses/website-perf-bootcamp.jpg",
   "isPaid": false,
-  "tags": ["http", "network", "loading"],
+  "tags": ["http", "loading", "network"],
   "url": "https://www.sitespeedbootcamp.com/"
 }

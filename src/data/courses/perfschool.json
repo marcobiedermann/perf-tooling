@@ -13,6 +13,6 @@
   },
   "img": "../../images/courses/perfschool.jpg",
   "isPaid": false,
-  "tags": ["budget", "measuring", "images", "fonts"],
+  "tags": ["budget", "fonts", "images", "measuring"],
   "url": "https://github.com/bevacqua/perfschool"
 }

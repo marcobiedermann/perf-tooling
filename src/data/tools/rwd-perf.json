@@ -10,5 +10,5 @@
     "url": "https://github.com/lafikl/RWDPerf"
   },
   "description": "Performance testing for Responsive web design websites.",
-  "tags": ["rwd", "metrics"]
+  "tags": ["metrics", "rwd"]
 }

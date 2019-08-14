@@ -10,6 +10,6 @@
   "stats": {
     "length": 88
   },
-  "tags": ["rwd", "performance", "metrics"],
+  "tags": ["metrics", "performance", "rwd"],
   "url": "https://speakerdeck.com/patrickhamann/breaking-news-at-1000ms-velocity-eu-2014"
 }

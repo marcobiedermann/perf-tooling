@@ -10,6 +10,6 @@
   "stats": {
     "length": 130
   },
-  "tags": ["css", "tooling", "workflow", "crp"],
+  "tags": ["crp", "css", "tooling", "workflow"],
   "url": "https://speakerdeck.com/addyosmani/css-performance-tooling"
 }

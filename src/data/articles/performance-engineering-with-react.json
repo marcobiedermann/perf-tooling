@@ -11,5 +11,5 @@
     "length": 2587
   },
   "url": "http://benchling.engineering/performance-engineering-with-react/",
-  "tags": ["react", "tooling", "monitoring"]
+  "tags": ["monitoring", "react", "tooling"]
 }

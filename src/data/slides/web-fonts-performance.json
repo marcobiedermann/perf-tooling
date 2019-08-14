@@ -10,6 +10,6 @@
   "stats": {
     "length": 121
   },
-  "tags": ["fonts", "preloading", "font-display", "http2"],
+  "tags": ["font-display", "fonts", "http2", "preloading"],
   "url": "https://speakerdeck.com/bramstein/web-fonts-performance"
 }

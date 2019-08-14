@@ -16,5 +16,6 @@
     "length": 478
   },
   "url": "http://perfaudit.com/case-study/caniuse.com/",
-  "types": ["article", "video"]
+  "types": ["article", "video"],
+  "tags": []
 }

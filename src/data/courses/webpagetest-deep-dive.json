@@ -13,6 +13,6 @@
   },
   "img": "../../images/courses/wpt-deep-dive.png",
   "isPaid": true,
-  "tags": ["webpagetest", "measuring", "optimisation"],
+  "tags": ["measuring", "optimisation", "webpagetest"],
   "url": "https://www.pluralsight.com/courses/webpagetest-deep-dive"
 }

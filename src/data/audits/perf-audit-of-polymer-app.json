@@ -10,5 +10,5 @@
   "date": "2015-09-15",
   "url": "https://www.youtube.com/watch?v=SkN5Q7nf7Vg",
   "types": ["video"],
-  "tags": ["devtools", "metrics", "Polymer", "timeline"]
+  "tags": ["Polymer", "devtools", "metrics", "timeline"]
 }

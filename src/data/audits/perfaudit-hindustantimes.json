@@ -16,5 +16,6 @@
     "length": 676
   },
   "url": "http://perfaudit.com/case-study/hindustantimes.com/",
-  "types": ["article", "video"]
+  "types": ["article", "video"],
+  "tags": []
 }

@@ -10,6 +10,6 @@
   "stats": {
     "length": 80
   },
-  "tags": ["css", "rendering", "above the fold"],
+  "tags": ["above the fold", "css", "rendering"],
   "url": "https://speakerdeck.com/csswizardry/facsst-css-and-performance"
 }

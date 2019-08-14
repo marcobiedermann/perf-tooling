@@ -4,5 +4,5 @@
     "url": "https://github.com/DavidHuie/httpq"
   },
   "description": "A Go service for buffering HTTP requests and processing them asynchronously",
-  "tags": ["http", "webhooks", "buffers"]
+  "tags": ["buffers", "http", "webhooks"]
 }

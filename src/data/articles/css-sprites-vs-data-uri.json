@@ -11,5 +11,5 @@
     "length": 1258
   },
   "url": "http://www.mobify.com/blog/css-sprites-vs-data-uris-which-is-faster-on-mobile/",
-  "tags": ["css", "sprites", "data-uri", "mobile"]
+  "tags": ["css", "data-uri", "mobile", "sprites"]
 }

@@ -5,5 +5,5 @@
     "isPaid": true
   },
   "description": "With Speedrank you get detailed audits about your website. We check the speed for your visitors and recommend improvements. Check also the websites of your competitors and take off in the point speed.",
-  "tags": ["benchmark", "metrics", "analysis", "timings"]
+  "tags": ["analysis", "benchmark", "metrics", "timings"]
 }

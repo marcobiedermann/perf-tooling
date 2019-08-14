@@ -19,5 +19,5 @@
     "url": "https://developers.google.com/speed/pagespeed/insights/"
   },
   "description": "PageSpeed Insights products will help you identify performance best practices that can be applied to your site, and PageSpeed optimization tools can help you automate the process.",
-  "tags": ["metrics", "budget"]
+  "tags": ["budget", "metrics"]
 }

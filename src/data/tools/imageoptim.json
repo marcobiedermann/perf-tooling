@@ -4,5 +4,5 @@
     "url": "https://github.com/pornel/ImageOptim"
   },
   "description": "ImageOptim is a GUI for lossless image optimization tools: PNGOUT, AdvPNG, Pngcrush, OptiPNG, JpegOptim, jpegrescan, jpegtran, and Gifsicle.",
-  "tags": ["images", "compression", "lossless", "app"]
+  "tags": ["app", "compression", "images", "lossless"]
 }

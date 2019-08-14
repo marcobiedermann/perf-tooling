@@ -11,5 +11,5 @@
     "length": 1753
   },
   "url": "http://benchling.engineering/deep-dive-react-perf-debugging/",
-  "tags": ["react", "metrics", "monitoring"]
+  "tags": ["metrics", "monitoring", "react"]
 }

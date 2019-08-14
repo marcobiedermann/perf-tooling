@@ -13,6 +13,6 @@
   },
   "img": "../../images/courses/tracking-web-perf.png",
   "isPaid": true,
-  "tags": ["rum", "measuring", "synthetic"],
+  "tags": ["measuring", "rum", "synthetic"],
   "url": "https://www.pluralsight.com/courses/web-performance-tracking"
 }

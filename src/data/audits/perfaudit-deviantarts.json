@@ -16,5 +16,6 @@
     "length": 911
   },
   "url": "http://perfaudit.com/case-study/deviantart.com/",
-  "types": ["article", "video"]
+  "types": ["article", "video"],
+  "tags": []
 }

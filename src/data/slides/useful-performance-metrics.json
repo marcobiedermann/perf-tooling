@@ -10,6 +10,6 @@
   "stats": {
     "length": 53
   },
-  "tags": ["budget", "performance", "tooling", "timing", "api"],
+  "tags": ["api", "budget", "performance", "timing", "tooling"],
   "url": "https://speakerdeck.com/benschwarz/useful-performance-metrics"
 }

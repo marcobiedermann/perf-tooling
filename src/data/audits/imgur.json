@@ -10,5 +10,5 @@
   "date": "2016-03-08",
   "url": "https://github.com/perfs/audits/issues/1",
   "types": ["github-issue"],
-  "tags": ["rendering", "loading"]
+  "tags": ["loading", "rendering"]
 }

@@ -10,6 +10,6 @@
   "stats": {
     "length": 1269
   },
-  "tags": ["metrics", "compression"],
+  "tags": ["compression", "metrics"],
   "url": "http://nicj.net/compressing-resourcetiming/"
 }

@@ -28,5 +28,5 @@
     "url": "https://github.com/wp-plugins/ewww-image-optimizer"
   },
   "description": "Minify images seamlessly with Node.js.",
-  "tags": ["images", "compression"]
+  "tags": ["compression", "images"]
 }

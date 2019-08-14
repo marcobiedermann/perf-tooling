@@ -10,5 +10,5 @@
   "date": "2015-07-03",
   "url": "https://github.com/reddit/reddit-mobile/issues/247",
   "types": ["github-issue"],
-  "tags": ["loading", "javascript execution", "network"]
+  "tags": ["javascript execution", "loading", "network"]
 }

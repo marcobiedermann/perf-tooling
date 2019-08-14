@@ -11,5 +11,5 @@
     "length": 2728
   },
   "url": "http://calendar.perfplanet.com/2014/fast-forward-performance-the-future-looks-bright/",
-  "tags": ["RUM", "resource timing", "beacon"]
+  "tags": ["RUM", "beacon", "resource timing"]
 }

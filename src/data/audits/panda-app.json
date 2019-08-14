@@ -10,5 +10,5 @@
   "date": "2015-12-02",
   "url": "http://perfaudit.com/case-study/panda-app/",
   "types": ["article"],
-  "tags": ["loading", "images", "rendering"]
+  "tags": ["images", "loading", "rendering"]
 }

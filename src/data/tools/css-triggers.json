@@ -7,5 +7,5 @@
     "url": "https://github.com/GoogleChromeLabs/css-triggers"
   },
   "description": "Ever wondered what work different CSS properties trigger? Wonder no more!",
-  "tags": ["analyze", "60fps"]
+  "tags": ["60fps", "analyze"]
 }

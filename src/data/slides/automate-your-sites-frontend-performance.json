@@ -10,6 +10,6 @@
   "stats": {
     "length": 199
   },
-  "tags": ["budget", "metrics", "automation"],
+  "tags": ["automation", "budget", "metrics"],
   "url": "https://speakerdeck.com/kitt/devobjective-automate-your-sites-front-end-performance"
 }

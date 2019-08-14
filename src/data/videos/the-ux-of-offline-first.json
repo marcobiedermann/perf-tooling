@@ -7,5 +7,5 @@
     }
   ],
   "vimeoId": "125479288",
-  "tags": ["offline", "ServiceWorker"]
+  "tags": ["ServiceWorker", "offline"]
 }

@@ -16,11 +16,11 @@
   },
   "url": "https://insights.project-a.com/the-business-value-of-site-speed-and-how-to-analyze-it-step-by-step-b01658e126cb",
   "tags": [
-    "Business Value",
-    "Business Intelligence",
     "BigQuery",
-    "critical path",
+    "Business Intelligence",
+    "Business Value",
     "Navigation Timing API",
+    "critical path",
     "monitoring"
   ]
 }

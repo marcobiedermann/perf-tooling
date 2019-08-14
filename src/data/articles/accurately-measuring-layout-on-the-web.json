@@ -9,6 +9,6 @@
   "stats": {
     "length": 20033
   },
-  "tags": ["metrics", "javascript"],
+  "tags": ["javascript", "metrics"],
   "url": "https://nolanlawson.com/2018/09/25/accurately-measuring-layout-on-the-web/"
 }

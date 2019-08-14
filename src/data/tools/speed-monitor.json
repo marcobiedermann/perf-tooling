@@ -4,5 +4,5 @@
     "url": "https://github.com/jacted/speed-monitor"
   },
   "description": "Website performance reports for slack using performance.timing",
-  "tags": ["timings", "metrics"]
+  "tags": ["metrics", "timings"]
 }

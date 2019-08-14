@@ -10,6 +10,6 @@
   "stats": {
     "length": 4426
   },
-  "tags": ["network", "loading", "metrics"],
+  "tags": ["loading", "metrics", "network"],
   "url": "http://www.nateberkopec.com/2015/11/05/page-weight-doesnt-matter.html"
 }

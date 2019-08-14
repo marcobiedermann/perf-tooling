@@ -25,5 +25,5 @@
     "url": "https://github.com/svg/svgo-gui"
   },
   "description": "SVGO is a Nodejs-based tool for optimizing SVG vector graphics files.",
-  "tags": ["svg", "minification"]
+  "tags": ["minification", "svg"]
 }

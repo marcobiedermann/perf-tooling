@@ -10,6 +10,6 @@
   "stats": {
     "length": 102
   },
-  "tags": ["metrics", "timing", "loading", "tooling", "monitoring"],
+  "tags": ["loading", "metrics", "monitoring", "timing", "tooling"],
   "url": "http://www.slideshare.net/JohnRiv/the-truth-about-your-web-apps-performance"
 }

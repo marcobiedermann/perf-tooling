@@ -14,5 +14,5 @@
     "length": 1849
   },
   "url": "https://developers.google.com/web/updates/2017/03/performant-expand-and-collapse",
-  "tags": ["css", "js", "performance", "60fps"]
+  "tags": ["60fps", "css", "js", "performance"]
 }

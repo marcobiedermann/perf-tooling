@@ -7,5 +7,5 @@
     "url": "https://github.com/GoogleChrome/lighthouse"
   },
   "description": "Lighthouse analyzes web apps and web pages, collecting modern performance metrics and insights on developer best practices.",
-  "tags": ["budget", "analysis", "metrics"]
+  "tags": ["analysis", "budget", "metrics"]
 }

@@ -7,5 +7,5 @@
     "url": "https://github.com/MarcDiethelm/grunt-glue-nu"
   },
   "description": "Glue is a simple command line tool to generate CSS sprites",
-  "tags": ["images", "sprite", "css"]
+  "tags": ["css", "images", "sprite"]
 }

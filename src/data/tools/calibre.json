@@ -5,5 +5,5 @@
     "isPaid": true
   },
   "description": "Continuous website quality and performance telemetry",
-  "tags": ["metrics", "budget", "timings", "css"]
+  "tags": ["budget", "css", "metrics", "timings"]
 }

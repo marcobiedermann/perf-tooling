@@ -7,5 +7,5 @@
     }
   ],
   "url": "http://goalsmashers.github.io/css-minification-benchmark/",
-  "tags": ["css", "minification", "optimizer", "comparison"]
+  "tags": ["comparison", "css", "minification", "optimizer"]
 }

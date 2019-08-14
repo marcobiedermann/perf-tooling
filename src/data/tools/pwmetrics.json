@@ -7,5 +7,5 @@
     "url": "https://github.com/paulirish/pwmetrics"
   },
   "description": "CLI tool and lib to gather performance metrics via Lighthouse",
-  "tags": ["analysis", "timings", "metrics"]
+  "tags": ["analysis", "metrics", "timings"]
 }

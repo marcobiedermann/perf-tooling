@@ -17,6 +17,6 @@
   },
   "img": "../../images/courses/browser-rendering.jpg",
   "isPaid": false,
-  "tags": ["60fps", "rendering", "optimisation"],
+  "tags": ["60fps", "optimisation", "rendering"],
   "url": "https://www.udacity.com/course/browser-rendering-optimization--ud860"
 }

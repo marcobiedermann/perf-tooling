@@ -15,5 +15,5 @@
     "length": 2617
   },
   "url": "https://developers.google.com/web/updates/2019/02/rendering-on-the-web",
-  "tags": ["render", "metrics", "network"]
+  "tags": ["metrics", "network", "render"]
 }
