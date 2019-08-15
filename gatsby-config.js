@@ -1,3 +1,9 @@
+const dotenv = require('dotenv');
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Performance Tooling Today',
@@ -15,6 +21,17 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
       },
     },
     'gatsby-transformer-json',
