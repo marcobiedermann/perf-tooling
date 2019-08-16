@@ -1,8 +1,10 @@
 {
   "name": "Speed Monitor",
-  "javascript": {
-    "url": "https://github.com/jacted/speed-monitor"
-  },
   "description": "Website performance reports for slack using performance.timing",
+  "resources": {
+    "javascript": {
+      "url": "https://github.com/jacted/speed-monitor"
+    }
+  },
   "tags": ["metrics", "timings"]
 }

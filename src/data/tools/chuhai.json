@@ -1,8 +1,10 @@
 {
   "name": "chuhai",
-  "node": {
-    "url": "https://github.com/Hypercubed/chuhai"
-  },
   "description": "Test driven benchmarking.",
+  "resources": {
+    "node": {
+      "url": "https://github.com/Hypercubed/chuhai"
+    }
+  },
   "tags": ["benchmark", "javascript", "testing"]
 }

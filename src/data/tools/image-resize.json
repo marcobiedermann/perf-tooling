@@ -1,8 +1,10 @@
 {
   "name": "grunt-image-resize",
-  "grunt": {
-    "url": "https://github.com/excellenteasy/grunt-image-resize"
-  },
   "description": "Resizing images made easy - thanks to imagemagick.",
+  "resources": {
+    "grunt": {
+      "url": "https://github.com/excellenteasy/grunt-image-resize"
+    }
+  },
   "tags": ["images", "resizing"]
 }

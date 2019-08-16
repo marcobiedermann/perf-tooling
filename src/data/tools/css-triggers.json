@@ -1,11 +1,13 @@
 {
   "name": "CSS-triggers",
-  "cli": {
-    "url": "https://github.com/lafikl/CSS-triggers-cli"
-  },
-  "service": {
-    "url": "https://github.com/GoogleChromeLabs/css-triggers"
-  },
   "description": "Ever wondered what work different CSS properties trigger? Wonder no more!",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/lafikl/CSS-triggers-cli"
+    },
+    "service": {
+      "url": "https://github.com/GoogleChromeLabs/css-triggers"
+    }
+  },
   "tags": ["60fps", "analyze"]
 }

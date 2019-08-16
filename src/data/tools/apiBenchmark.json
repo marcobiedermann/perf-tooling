@@ -1,11 +1,13 @@
 {
   "name": "API Benchmark",
-  "grunt": {
-    "url": "https://github.com/matteofigus/grunt-api-benchmark"
-  },
-  "node": {
-    "url": "https://github.com/matteofigus/api-benchmark"
-  },
   "description": "A grunt plugin based on the nodejs module api-benchmark that takes a config.json file like this, makes some performance tests to your api, and creates an html export.",
+  "resources": {
+    "grunt": {
+      "url": "https://github.com/matteofigus/grunt-api-benchmark"
+    },
+    "node": {
+      "url": "https://github.com/matteofigus/api-benchmark"
+    }
+  },
   "tags": ["api", "benchmark"]
 }

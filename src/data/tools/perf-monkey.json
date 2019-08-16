@@ -1,8 +1,10 @@
 {
   "name": "Perfmonkey",
-  "service": {
-    "url": "http://www.perfmonkey.com/"
-  },
   "description": "PerfMonkey makes it very simple to keep track of your website's rendering performance.",
+  "resources": {
+    "service": {
+      "url": "http://www.perfmonkey.com/"
+    }
+  },
   "tags": ["metrics", "rendering"]
 }

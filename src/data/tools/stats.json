@@ -1,11 +1,13 @@
 {
   "name": "Stats",
-  "bookmarklet": {
-    "url": "https://github.com/mrdoob/stats.js"
-  },
-  "javascript": {
-    "url": "https://github.com/mrdoob/stats.js"
-  },
   "description": "This script provides a simple info box that will help you monitor your code performance.",
+  "resources": {
+    "bookmarklet": {
+      "url": "https://github.com/mrdoob/stats.js"
+    },
+    "javascript": {
+      "url": "https://github.com/mrdoob/stats.js"
+    }
+  },
   "tags": ["fps", "javascript", "monitoring"]
 }

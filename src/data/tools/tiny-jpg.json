@@ -1,8 +1,10 @@
 {
   "name": "tiny jpg",
-  "service": {
-    "url": "https://tinyjpg.com/"
-  },
   "description": "Smart JPEG compression - Compress JPEG files with a perfect balance in quality and file size.",
+  "resources": {
+    "service": {
+      "url": "https://tinyjpg.com/"
+    }
+  },
   "tags": ["compression", "images"]
 }

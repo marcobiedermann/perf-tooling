@@ -1,11 +1,13 @@
 {
   "name": "speedgun",
-  "node": {
-    "url": "https://github.com/wesleyhales/speedgun"
-  },
-  "service": {
-    "url": "http://speedgun.io/"
-  },
   "description": "This site allows you to point Speedgun.js at any public facing website* to gather important web performance data.",
+  "resources": {
+    "node": {
+      "url": "https://github.com/wesleyhales/speedgun"
+    },
+    "service": {
+      "url": "http://speedgun.io/"
+    }
+  },
   "tags": ["loading", "metrics"]
 }

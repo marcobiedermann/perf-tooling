@@ -1,8 +1,10 @@
 {
   "name": "postcss-resemble-image",
-  "node": {
-    "url": "https://github.com/ben-eb/postcss-resemble-image"
-  },
   "description": "Provide a gradient fallback for an image that loosely resembles the original.",
+  "resources": {
+    "node": {
+      "url": "https://github.com/ben-eb/postcss-resemble-image"
+    }
+  },
   "tags": ["css", "images", "loading", "network"]
 }

@@ -1,8 +1,10 @@
 {
   "name": "Adept",
-  "cli": {
-    "url": "https://github.com/technopagan/adept-jpg-compressor"
-  },
   "description": "A Bash script to automate adaptive JPEG compression using common CLI tools",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/technopagan/adept-jpg-compressor"
+    }
+  },
   "tags": ["compression", "images"]
 }

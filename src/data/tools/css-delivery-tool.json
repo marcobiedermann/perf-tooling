@@ -1,8 +1,10 @@
 {
   "name": "CSS delivery tool",
-  "service": {
-    "url": "https://varvy.com/tools/css-delivery/"
-  },
   "description": "This tool examines how a webpage uses CSS. Checks internal and external use of CSS.",
+  "resources": {
+    "service": {
+      "url": "https://varvy.com/tools/css-delivery/"
+    }
+  },
   "tags": ["css", "loading"]
 }

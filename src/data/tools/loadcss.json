@@ -1,8 +1,10 @@
 {
   "name": "loadCSS",
-  "javascript": {
-    "url": "https://github.com/filamentgroup/loadCSS"
-  },
   "description": "A function for loading CSS asynchronously.",
+  "resources": {
+    "javascript": {
+      "url": "https://github.com/filamentgroup/loadCSS"
+    }
+  },
   "tags": ["loading", "progressive enhancement"]
 }

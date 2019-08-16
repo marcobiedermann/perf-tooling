@@ -1,8 +1,10 @@
 {
   "name": "Helium",
-  "javascript": {
-    "url": "https://github.com/geuis/helium-css"
-  },
   "description": "Helium - javascript tool to scan your site and show unused CSS",
+  "resources": {
+    "javascript": {
+      "url": "https://github.com/geuis/helium-css"
+    }
+  },
   "tags": ["css"]
 }

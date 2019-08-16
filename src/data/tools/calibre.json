@@ -1,9 +1,11 @@
 {
   "name": "Calibre",
-  "service": {
-    "url": "https://calibreapp.com/",
-    "isPaid": true
-  },
   "description": "Continuous website quality and performance telemetry",
+  "resources": {
+    "service": {
+      "url": "https://calibreapp.com/",
+      "isPaid": true
+    }
+  },
   "tags": ["budget", "css", "metrics", "timings"]
 }

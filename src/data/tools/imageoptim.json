@@ -1,8 +1,10 @@
 {
   "name": "ImageOptim",
-  "mac": {
-    "url": "https://github.com/pornel/ImageOptim"
-  },
   "description": "ImageOptim is a GUI for lossless image optimization tools: PNGOUT, AdvPNG, Pngcrush, OptiPNG, JpegOptim, jpegrescan, jpegtran, and Gifsicle.",
+  "resources": {
+    "mac": {
+      "url": "https://github.com/pornel/ImageOptim"
+    }
+  },
   "tags": ["app", "compression", "images", "lossless"]
 }

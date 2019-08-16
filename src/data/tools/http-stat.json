@@ -1,8 +1,10 @@
 {
   "name": "httpstat",
-  "cli": {
-    "url": "https://github.com/reorx/httpstat"
-  },
   "description": "curl statistics made simple.",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/reorx/httpstat"
+    }
+  },
   "tags": ["http", "metrics", "network"]
 }

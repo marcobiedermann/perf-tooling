@@ -1,8 +1,10 @@
 {
   "name": "Ruby JMeter",
-  "ruby": {
-    "url": "https://github.com/flood-io/ruby-jmeter"
-  },
   "description": "A Ruby based DSL for building JMeter test plans.",
+  "resources": {
+    "ruby": {
+      "url": "https://github.com/flood-io/ruby-jmeter"
+    }
+  },
   "tags": ["jmeter", "load", "testing"]
 }

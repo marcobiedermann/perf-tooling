@@ -12,82 +12,81 @@ const ToolsPage = () => {
           edges {
             node {
               description
-              angular {
-                url
-              }
-              apache {
-                url
-              }
-              bookmarklet {
-                url
-              }
-              broccoli {
-                url
-              }
-              chrome {
-                url
-              }
-              cli {
-                url
-              }
-              firefox {
-                url
-              }
-              googleAppsScript {
-                url
-              }
-              grunt {
-                url
-              }
-              gulp {
-                url
-              }
               id
-              illustrator {
-                url
-              }
-              java {
-                url
-              }
-              javascript {
-                url
-              }
-              linux {
-                url
-              }
-              mac {
-                url
-              }
-              module {
-                url
-              }
               name
-              nginx {
-                url
-              }
-              node {
-                url
-              }
-              php {
-                url
-              }
-              python {
-                url
-              }
-              ruby {
-                url
-              }
-              service {
-                isPaid
-                url
+              resources {
+                angular {
+                  url
+                }
+                apache {
+                  url
+                }
+                bookmarklet {
+                  url
+                }
+                broccoli {
+                  url
+                }
+                chrome {
+                  url
+                }
+                cli {
+                  url
+                }
+                firefox {
+                  url
+                }
+                googleAppsScript {
+                  url
+                }
+                grunt {
+                  url
+                }
+                gulp {
+                  url
+                }
+                illustrator {
+                  url
+                }
+                java {
+                  url
+                }
+                javascript {
+                  url
+                }
+                linux {
+                  url
+                }
+                mac {
+                  url
+                }
+                nginx {
+                  url
+                }
+                node {
+                  url
+                }
+                php {
+                  url
+                }
+                python {
+                  url
+                }
+                ruby {
+                  url
+                }
+                service {
+                  isPaid
+                  url
+                }
+                windows {
+                  url
+                }
+                wordpress {
+                  url
+                }
               }
               tags
-              windows {
-                url
-              }
-              wordpress {
-                url
-              }
             }
           }
         }

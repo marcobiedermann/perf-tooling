@@ -1,8 +1,10 @@
 {
   "name": "speed-demen",
-  "googleAppsScript": {
-    "url": "https://github.com/morsssss/speed-demon"
-  },
   "description": "An Apps Script that polls Webpagetest weekly and puts the result into a Google Sheet.",
+  "resources": {
+    "googleAppsScript": {
+      "url": "https://github.com/morsssss/speed-demon"
+    }
+  },
   "tags": ["analysis", "metrics", "webpagetest"]
 }

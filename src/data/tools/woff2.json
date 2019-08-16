@@ -1,8 +1,10 @@
 {
   "name": "woff2",
-  "cli": {
-    "url": "https://github.com/google/woff2"
-  },
   "description": "Font compression modules (mainly TTF to WOFF2)",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/google/woff2"
+    }
+  },
   "tags": ["fonts"]
 }

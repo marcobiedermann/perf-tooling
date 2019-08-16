@@ -1,9 +1,11 @@
 {
   "name": "Speedrank",
-  "service": {
-    "url": "https://speedrank.app/",
-    "isPaid": true
-  },
   "description": "With Speedrank you get detailed audits about your website. We check the speed for your visitors and recommend improvements. Check also the websites of your competitors and take off in the point speed.",
+  "resources": {
+    "service": {
+      "url": "https://speedrank.app/",
+      "isPaid": true
+    }
+  },
   "tags": ["analysis", "benchmark", "metrics", "timings"]
 }

@@ -1,8 +1,10 @@
 {
   "name": "node clinic",
-  "cli": {
-    "url": "https://github.com/derekshull/nines"
-  },
   "description": "A diagnoses tool for your Node.js performance issues",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/derekshull/nines"
+    }
+  },
   "tags": ["metrics", "node.js", "performance"]
 }

@@ -1,8 +1,10 @@
 {
   "name": "Enhance",
-  "javascript": {
-    "url": "https://github.com/filamentgroup/enhance"
-  },
   "description": "A JavaScript workflow designed to progressively enhance sites in a qualified manner.",
+  "resources": {
+    "javascript": {
+      "url": "https://github.com/filamentgroup/enhance"
+    }
+  },
   "tags": ["loading", "progressive enhancement"]
 }

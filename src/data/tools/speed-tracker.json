@@ -1,8 +1,10 @@
 {
   "name": "speedtracker",
-  "service": {
-    "url": "https://github.com/speedtracker/speedtracker"
-  },
   "description": "Website performance monitoring tool using WebPageTest",
+  "resources": {
+    "service": {
+      "url": "https://github.com/speedtracker/speedtracker"
+    }
+  },
   "tags": ["metrics"]
 }

@@ -1,8 +1,10 @@
 {
   "name": "WebPonize",
-  "mac": {
-    "url": "https://github.com/1000ch/WebPonize"
-  },
   "description": "WebPonize is a Mac OS App for converting PNG, JPEG, animated (or not) GIF images into WebP.",
+  "resources": {
+    "mac": {
+      "url": "https://github.com/1000ch/WebPonize"
+    }
+  },
   "tags": ["app", "compression", "images"]
 }

@@ -1,8 +1,10 @@
 {
   "name": "Exthouse",
-  "cli": {
-    "url": "https://github.com/treosh/exthouse"
-  },
   "description": "Analyze the impact of a browser extension on web performance.",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/treosh/exthouse"
+    }
+  },
   "tags": ["analysis", "metrics", "timings"]
 }

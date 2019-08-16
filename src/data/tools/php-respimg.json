@@ -1,8 +1,10 @@
 {
   "name": "php-respimg",
-  "php": {
-    "url": "https://github.com/nwtn/php-respimg"
-  },
   "description": "A responsive image workflow for optimizing and resizing your images",
+  "resources": {
+    "php": {
+      "url": "https://github.com/nwtn/php-respimg"
+    }
+  },
   "tags": ["compression", "images", "php", "responsive"]
 }

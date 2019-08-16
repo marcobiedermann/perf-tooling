@@ -1,8 +1,10 @@
 {
   "name": "ng-stats",
-  "angular": {
-    "url": "https://github.com/kentcdodds/ng-stats"
-  },
   "description": "Little utility to show stats about your page's angular digest/watches.",
+  "resources": {
+    "angular": {
+      "url": "https://github.com/kentcdodds/ng-stats"
+    }
+  },
   "tags": ["digest"]
 }

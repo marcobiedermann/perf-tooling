@@ -1,8 +1,10 @@
 {
   "name": "nines",
-  "javascript": {
-    "url": "https://github.com/derekshull/nines"
-  },
   "description": "A web performance tool aimed to help developers find critical performance issues.",
+  "resources": {
+    "javascript": {
+      "url": "https://github.com/derekshull/nines"
+    }
+  },
   "tags": ["budget", "performance"]
 }

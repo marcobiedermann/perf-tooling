@@ -1,8 +1,10 @@
 {
   "name": "Jpegoptim",
-  "cli": {
-    "url": "https://github.com/tjko/jpegoptim"
-  },
   "description": "Utility to optimize/compress JPEG files",
+  "resources": {
+    "cli": {
+      "url": "https://github.com/tjko/jpegoptim"
+    }
+  },
   "tags": ["compression", "images"]
 }
