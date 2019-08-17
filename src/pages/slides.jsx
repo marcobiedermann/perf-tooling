@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Slides from '../components/Slides';
 
@@ -35,8 +37,12 @@ const SlidesPage = () => {
   return (
     <Layout>
       <SEO title="Slides" />
-      <h1>Slides</h1>
-      <Slides slides={slides} />
+      <Section>
+        <Grid>
+          <h1>Slides</h1>
+          <Slides slides={slides} />
+        </Grid>
+      </Section>
     </Layout>
   );
 };

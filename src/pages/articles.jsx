@@ -1,7 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Articles from '../components/Articles';
+import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Section from '../components/Section';
 import SEO from '../components/SEO';
 
 const ArticlesPage = () => {
@@ -35,8 +37,12 @@ const ArticlesPage = () => {
   return (
     <Layout>
       <SEO title="Articles" />
-      <h1>Articles</h1>
-      <Articles articles={articles} />
+      <Section>
+        <Grid>
+          <h1>Articles</h1>
+          <Articles articles={articles} />
+        </Grid>
+      </Section>
     </Layout>
   );
 };

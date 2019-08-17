@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Videos from '../components/Videos';
 
@@ -32,8 +34,12 @@ const VideosPage = () => {
   return (
     <Layout>
       <SEO title="Videos" />
-      <h1>Videos</h1>
-      <Videos videos={videos} />
+      <Section>
+        <Grid>
+          <h1>Videos</h1>
+          <Videos videos={videos} />
+        </Grid>
+      </Section>
     </Layout>
   );
 };
