@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as RESOURCES from '../../constants/resources';
+import Resources from '../Resources';
 import Tags from '../Tags';
 
 const Tool = props => {
@@ -13,19 +13,19 @@ const Tool = props => {
         {resources.service && resources.service.isPaid && <small>(Paid)</small>}
       </h3>
       <p>{description}</p>
-      <ul>
-        {Object.keys(resources)
+      <Resources
+        resources={Object.keys(resources)
           .filter(key => resources[key])
           .map(key => {
             const resource = resources[key];
+            const { url } = resource;
 
-            return (
-              <li key={[key]}>
-                <a href={resource.url}>{RESOURCES[key]}</a>
-              </li>
-            );
+            return {
+              id: key,
+              url,
+            };
           })}
-      </ul>
+      />
       <Tags tags={tags} />
     </>
   );
