@@ -1,0 +1,23 @@
+.tools {
+  list-style: none;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
+  padding: 0;
+}
+
+.tools > li {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.tools > li + li {
+  border-top: 1px solid #b7b7b7;
+}
+
+.tools > li :first-child {
+  margin-top: 0;
+}
+
+.tools > li :last-child {
+  margin-bottom: 0;
+}

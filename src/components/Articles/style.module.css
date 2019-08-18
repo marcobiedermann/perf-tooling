@@ -1,0 +1,23 @@
+.articles {
+  list-style: none;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
+  padding: 0;
+}
+
+.articles > li {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.articles > li + li {
+  border-top: 1px solid #b7b7b7;
+}
+
+.articles > li :first-child {
+  margin-top: 0;
+}
+
+.articles > li :last-child {
+  margin-bottom: 0;
+}
