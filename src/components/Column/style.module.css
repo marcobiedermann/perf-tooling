@@ -1,0 +1,7 @@
+.column {
+  grid-column-end: span 12;
+}
+
+.column--column-span-6 {
+  grid-column-end: span 6;
+}
