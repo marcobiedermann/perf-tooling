@@ -10,7 +10,7 @@ const Courses = props => {
   return (
     <ul className={classNames(className, styles.courses)}>
       {courses.map(course => (
-        <li key={course.id}>
+        <li key={course.objectId}>
           <Course {...course} />
         </li>
       ))}

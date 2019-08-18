@@ -10,7 +10,7 @@ const Videos = props => {
   return (
     <ul className={classNames(className, styles.videos)}>
       {videos.map(video => (
-        <li key={video.id}>
+        <li key={video.objectId}>
           <Video {...video} />
         </li>
       ))}

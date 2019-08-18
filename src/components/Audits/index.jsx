@@ -10,7 +10,7 @@ const Audits = props => {
   return (
     <ul className={classNames(className, styles.audits)}>
       {audits.map(audit => (
-        <li key={audit.id}>
+        <li key={audit.objectId}>
           <Audit {...audit} />
         </li>
       ))}

@@ -10,7 +10,7 @@ const Books = props => {
   return (
     <ul className={classNames(className, styles.books)}>
       {books.map(book => (
-        <li key={book.id}>
+        <li key={book.objectId}>
           <Book {...book} />
         </li>
       ))}

@@ -10,7 +10,7 @@ const Slides = props => {
   return (
     <ul className={classNames(className, styles.slides)}>
       {slides.map(slide => (
-        <li key={slide.id}>
+        <li key={slide.objectId}>
           <Slide {...slide} />
         </li>
       ))}
