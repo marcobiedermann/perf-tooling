@@ -1,13 +1,15 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Resources from '../Resources';
 import Tags from '../Tags';
+import styles from './style.module.css';
 
 const Tool = props => {
-  const { description, name, tags, resources } = props;
+  const { className, description, name, tags, resources } = props;
 
   return (
-    <>
+    <div className={classNames(className, styles.tool)}>
       <h3>
         {name}
         {resources.service && resources.service.isPaid && <small>(Paid)</small>}
@@ -27,11 +29,12 @@ const Tool = props => {
           })}
       />
       <Tags tags={tags} />
-    </>
+    </div>
   );
 };
 
 Tool.propTypes = {
+  className: PropTypes.string,
   description: PropTypes.string,
   name: PropTypes.string,
   resources: PropTypes.shape({
@@ -110,6 +113,7 @@ Tool.propTypes = {
 };
 
 Tool.defaultProps = {
+  className: '',
   description: '',
   name: '',
   tags: [],
