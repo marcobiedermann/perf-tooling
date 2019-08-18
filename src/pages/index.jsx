@@ -72,7 +72,7 @@ const IndexPage = () => {
       <Section>
         <Grid>
           <Row>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalTools} Tools</h3>
               <p>
                 A rich collection of tools available to optimize and/or monitor your website’s performance including
@@ -82,7 +82,7 @@ const IndexPage = () => {
                 <Link to={routes.TOOLS.path}>Explore Tools</Link>
               </p>
             </Column>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalArticles} Articles</h3>
               <p>
                 An exclusive list of articles about best practices to build fast websites which will make your visitors
@@ -92,9 +92,7 @@ const IndexPage = () => {
                 <Link to={routes.ARTICLES.path}>Explore Articles</Link>
               </p>
             </Column>
-          </Row>
-          <Row>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalVideos} Videos</h3>
               <p>
                 A collection of recent videos including performance-specific tips and tricks to build better and faster
@@ -104,16 +102,14 @@ const IndexPage = () => {
                 <Link to={routes.VIDEOS.path}>Explore Videos</Link>
               </p>
             </Column>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalSlides} Slidedecks</h3>
               <p>A library of slides from great talks covering performance-related topics.</p>
               <p>
                 <Link to={routes.SLIDES.path}>Explore Slidedecks</Link>
               </p>
             </Column>
-          </Row>
-          <Row>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalBooks} Books</h3>
               <p>
                 Our books section features recommended books from some of the most influential authors in the field.
@@ -122,16 +118,14 @@ const IndexPage = () => {
                 <Link to={routes.BOOKS.path}>Explore Books</Link>
               </p>
             </Column>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalCourses} Courses</h3>
               <p>For self-learners, we include courses to get you going.</p>
               <p>
                 <Link to={routes.COURSES.path}>Explore Courses</Link>
               </p>
             </Column>
-          </Row>
-          <Row>
-            <Column>
+            <Column columnSpan={6}>
               <h3>{totalAudits} Audits</h3>
               <p>
                 Our books section features recommended books from some of the most influential authors in the field.
