@@ -3,6 +3,7 @@ import React from 'react';
 import Courses from '../components/Courses';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Search from '../components/Search';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 
@@ -49,6 +50,7 @@ const CoursesPage = () => {
       <Section>
         <Grid>
           <h1>Articles</h1>
+          <Search indexName="courses" />
           <Courses courses={courses} />
         </Grid>
       </Section>

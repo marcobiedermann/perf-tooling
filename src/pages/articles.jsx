@@ -3,6 +3,7 @@ import React from 'react';
 import Articles from '../components/Articles';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Search from '../components/Search';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 
@@ -40,6 +41,7 @@ const ArticlesPage = () => {
       <Section>
         <Grid>
           <h1>Articles</h1>
+          <Search indexName="articles" />
           <Articles articles={articles} />
         </Grid>
       </Section>

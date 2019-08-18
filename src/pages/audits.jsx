@@ -3,6 +3,7 @@ import React from 'react';
 import Audits from '../components/Audits';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Search from '../components/Search';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 
@@ -42,6 +43,7 @@ const AuditsPage = () => {
       <Section>
         <Grid>
           <h1>Audits</h1>
+          <Search indexName="audits" />
           <Audits audits={audits} />
         </Grid>
       </Section>

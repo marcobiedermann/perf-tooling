@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import Search from '../components/Search';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Tools from '../components/Tools';
@@ -104,6 +105,7 @@ const ToolsPage = () => {
       <Section>
         <Grid>
           <h1>Tools</h1>
+          <Search indexName="tools" />
           <Tools tools={tools} />
         </Grid>
       </Section>
