@@ -10,7 +10,7 @@ const CoursesPage = () => {
   const { allCoursesJson } = useStaticQuery(
     graphql`
       query {
-        allCoursesJson {
+        allCoursesJson(sort: { fields: date, order: DESC }) {
           edges {
             node {
               authors {

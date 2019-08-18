@@ -10,7 +10,7 @@ const SlidesPage = () => {
   const { allSlidesJson } = useStaticQuery(
     graphql`
       query {
-        allSlidesJson {
+        allSlidesJson(sort: { fields: date, order: DESC }) {
           edges {
             node {
               authors {

@@ -10,7 +10,7 @@ const AuditsPage = () => {
   const { allAuditsJson } = useStaticQuery(
     graphql`
       query {
-        allAuditsJson {
+        allAuditsJson(sort: { fields: date, order: DESC }) {
           edges {
             node {
               authors {
