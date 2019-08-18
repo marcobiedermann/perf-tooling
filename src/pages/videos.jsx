@@ -11,7 +11,7 @@ const VideosPage = () => {
       <SEO title="Videos" />
       <Section>
         <Grid>
-          <h1>Videos</h1>
+          <h1>List of performance videos</h1>
           <Search indexName="videos" />
         </Grid>
       </Section>

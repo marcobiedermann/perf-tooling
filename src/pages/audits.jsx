@@ -11,7 +11,7 @@ const AuditsPage = () => {
       <SEO title="Audits" />
       <Section>
         <Grid>
-          <h1>Audits</h1>
+          <h1>List of performance audits</h1>
           <Search indexName="audits" />
         </Grid>
       </Section>

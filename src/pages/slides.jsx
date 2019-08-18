@@ -11,7 +11,7 @@ const SlidesPage = () => {
       <SEO title="Slides" />
       <Section>
         <Grid>
-          <h1>Slides</h1>
+          <h1>List of performance slides</h1>
           <Search indexName="slides" />
         </Grid>
       </Section>
