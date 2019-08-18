@@ -1,0 +1,11 @@
+.media__body {
+  flex-grow: 1;
+}
+
+.media__body :first-child {
+  margin-top: 0;
+}
+
+.media__body :last-child {
+  margin-bottom: 0;
+}
