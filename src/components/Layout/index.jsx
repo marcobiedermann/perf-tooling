@@ -24,7 +24,9 @@ const Layout = ({ children }) => {
       <Header>
         <Grid>
           <h1>
-            <Link to="/">{data.site.siteMetadata.title}</Link>
+            <Link to="/">
+              <img src="images/perf-tooling.svg" alt={data.site.siteMetadata.title} width="64" height="43" />
+            </Link>
           </h1>
           <Navigation
             routes={[
