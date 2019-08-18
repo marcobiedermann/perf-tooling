@@ -1,31 +1,40 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Media from '../Media';
+import MediaBody from '../MediaBody';
+import MediaObject from '../MediaObject';
 import Tags from '../Tags';
 
 const Video = props => {
   const { authors, name, tags, vimeoId, youtubeId } = props;
 
   return (
-    <>
-      <h3>
-        {vimeoId && <a href={`https://vimeo.com/${vimeoId}`}>{name}</a>}
-        {youtubeId && <a href={`https://youtube.com/watch?${youtubeId}`}>{name}</a>}
-      </h3>
-      <h4>
-        by{' '}
-        {authors.map(author => (
-          <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
-        ))}
-      </h4>
-      <figure>
-        {youtubeId && (
-          <a href={`https://youtube.com/watch?${youtubeId}`}>
-            <img src={`https://i.ytimg.com/vi/${youtubeId}/mqdefault.jpg`} alt={name} />
-          </a>
-        )}
-      </figure>
-      <Tags tags={tags} />
-    </>
+    <div>
+      <Media>
+        <MediaObject>
+          <figure>
+            {youtubeId && (
+              <a href={`https://youtube.com/watch?${youtubeId}`}>
+                <img src={`https://i.ytimg.com/vi/${youtubeId}/mqdefault.jpg`} alt={name} />
+              </a>
+            )}
+          </figure>
+        </MediaObject>
+        <MediaBody>
+          <h3>
+            {vimeoId && <a href={`https://vimeo.com/${vimeoId}`}>{name}</a>}
+            {youtubeId && <a href={`https://youtube.com/watch?${youtubeId}`}>{name}</a>}
+          </h3>
+          <h4>
+            by{' '}
+            {authors.map(author => (
+              <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
+            ))}
+          </h4>
+          <Tags tags={tags} />
+        </MediaBody>
+      </Media>
+    </div>
   );
 };
 

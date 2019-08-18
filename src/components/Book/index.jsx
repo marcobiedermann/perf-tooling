@@ -1,29 +1,38 @@
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Media from '../Media';
+import MediaBody from '../MediaBody';
+import MediaObject from '../MediaObject';
 import Tags from '../Tags';
 
 const Book = props => {
   const { authors, date, description, img, name, stats, tags, url } = props;
 
   return (
-    <>
-      <h3>
-        <a href={url}>{name}</a>
-      </h3>
-      <h4>
-        {date} by{' '}
-        {authors.map(author => (
-          <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
-        ))}
-      </h4>
-      <p>{description}</p>
-      <figure>
-        <Img fixed={img.childImageSharp.fixed} />
-      </figure>
-      <ul>{stats && stats.length && <li>Length: {stats.length} Pages</li>}</ul>
-      <Tags tags={tags} />
-    </>
+    <div>
+      <Media>
+        <MediaObject>
+          <figure>
+            <Img fixed={img.childImageSharp.fixed} />
+          </figure>
+        </MediaObject>
+        <MediaBody>
+          <h3>
+            <a href={url}>{name}</a>
+          </h3>
+          <h4>
+            {date} by{' '}
+            {authors.map(author => (
+              <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
+            ))}
+          </h4>
+          <p>{description}</p>
+          <ul>{stats && stats.length && <li>Length: {stats.length} Pages</li>}</ul>
+          <Tags tags={tags} />
+        </MediaBody>
+      </Media>
+    </div>
   );
 };
 
