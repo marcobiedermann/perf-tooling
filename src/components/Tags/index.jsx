@@ -1,12 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Tag from '../Tag';
+import styles from './style.module.css';
 
 const Tags = props => {
-  const { tags } = props;
+  const { className, tags } = props;
 
   return (
-    <ul>
+    <ul className={classNames(className, styles.tags)}>
       {tags.map(tag => (
         <li key={tag}>
           <Tag>{tag}</Tag>
@@ -17,10 +19,12 @@ const Tags = props => {
 };
 
 Tags.propTypes = {
+  className: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
 };
 
 Tags.defaultProps = {
+  className: '',
   tags: [],
 };
 
