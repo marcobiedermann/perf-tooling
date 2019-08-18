@@ -1,12 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Resource from '../Resource';
+import styles from './style.module.css';
 
 const Resources = props => {
-  const { resources } = props;
+  const { className, resources } = props;
 
   return (
-    <ul>
+    <ul className={classNames(className, styles.resources)}>
       {resources.map(resource => (
         <li key={resource.id}>
           <Resource {...resource} />
@@ -17,6 +19,7 @@ const Resources = props => {
 };
 
 Resources.propTypes = {
+  className: PropTypes.string,
   resources: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -25,6 +28,7 @@ Resources.propTypes = {
 };
 
 Resources.defaultProps = {
+  className: '',
   resources: [],
 };
 

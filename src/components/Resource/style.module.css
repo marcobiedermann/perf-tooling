@@ -1,0 +1,102 @@
+.resource {
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  padding: 0.75em;
+}
+
+.resource--angular {
+  background-color: #a6120d;
+}
+
+.resource--apache {
+  background-color: #b21142;
+}
+
+.resource--bookmarklet {
+  background-color: #e63830;
+}
+
+.resource--broccoli {
+  background-color: #598527;
+}
+
+.resource--chrome {
+  background-color: #0181f5;
+}
+
+.resource--cli {
+  background-color: #121212;
+}
+
+.resource--firefox {
+  background-color: #e66000;
+}
+
+.resource--googleAppsScript {
+  background-color: #377ef5;
+}
+
+.resource--grunt {
+  background-color: #e48632;
+}
+
+.resource--gulp {
+  background-color: #eb4a4b;
+}
+
+.resource--illustrator {
+  background-color: #f89404;
+}
+
+.resource--java {
+  background-color: #5382a1;
+}
+
+.resource--javascript {
+  background-color: #f7df1e;
+}
+
+.resource--linux {
+  background-color: #e8b627;
+}
+
+.resource--mac {
+  background-color: #656565;
+}
+
+.resource--nginx {
+  background-color: #00992d;
+}
+
+.resource--node {
+  background-color: #80bd01;
+}
+
+.resource--php {
+  background-color: #8892bf;
+}
+
+.resource--python {
+  background-color: #3776ab;
+}
+
+.resource--ruby {
+  background-color: #cc342d;
+}
+
+.resource--safari {
+  background-color: #4189d6;
+}
+
+.resource--service {
+  background-color: #1993dc;
+}
+
+.resource--windows {
+  background-color: #00bcf2;
+}
+
+.resource--wordpress {
+  background-color: #21759b;
+}
