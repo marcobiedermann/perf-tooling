@@ -1,12 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Tool from '../Tool';
+import styles from './style.module.css';
 
 const Tools = props => {
-  const { tools } = props;
+  const { className, tools } = props;
 
   return (
-    <ul>
+    <ul className={classNames(className, styles.tools)}>
       {tools.map(tool => (
         <li key={tool.id}>
           <Tool {...tool} />
@@ -17,10 +19,12 @@ const Tools = props => {
 };
 
 Tools.propTypes = {
+  className: PropTypes.string,
   tools: PropTypes.arrayOf(PropTypes.shape()),
 };
 
 Tools.defaultProps = {
+  className: '',
   tools: [],
 };
 

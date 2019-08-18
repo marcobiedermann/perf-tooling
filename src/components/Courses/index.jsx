@@ -1,12 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Course from '../Course';
+import styles from './style.module.css';
 
 const Courses = props => {
-  const { courses } = props;
+  const { className, courses } = props;
 
   return (
-    <ul>
+    <ul className={classNames(className, styles.courses)}>
       {courses.map(course => (
         <li key={course.id}>
           <Course {...course} />
@@ -17,10 +19,12 @@ const Courses = props => {
 };
 
 Courses.propTypes = {
+  className: PropTypes.string,
   courses: PropTypes.arrayOf(PropTypes.shape()),
 };
 
 Courses.defaultProps = {
+  className: '',
   courses: [],
 };
 
