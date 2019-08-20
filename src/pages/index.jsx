@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { bugs } from '../../package.json';
 import Column from '../components/Column';
 import Contributors from '../components/Contributors';
 import Grid from '../components/Grid';
@@ -157,12 +158,7 @@ const IndexPage = () => {
             You want to add a tool? Great!
             <br />
             Either{' '}
-            <a
-              href="https://github.com/stefanjudis/perf-tooling/issues"
-              title="Link to repository issues"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
               create an issue
             </a>{' '}
             and we’ll add it to perf-tooling.today.
@@ -203,22 +199,12 @@ const IndexPage = () => {
           <p>
             We would like this project to become a shared resource maintained by the community, so if you have any ideas
             on how to improve it or make it better, please let us know and{' '}
-            <a
-              href="https://github.com/stefanjudis/perf-tooling/issues"
-              title="Link to repository issues"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
               file an issue on Github.
             </a>
           </p>
           <p>
-            <a
-              href="https://github.com/stefanjudis/perf-tooling/issues"
-              title="Link to repository issues"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
               Submit a resource
             </a>{' '}
             <a
