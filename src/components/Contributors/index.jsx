@@ -1,16 +1,17 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Contributor from '../Contributor';
+import styles from './style.module.css';
 
 const Contributors = props => {
-  const { contributors } = props;
+  const { className, contributors } = props;
 
   return (
-    <ul>
+    <ul className={classNames(className, styles.contributors)}>
       {contributors.map(contributor => (
         <li key={contributor.id}>
-          <a href={contributor.html_url}>
-            <img src={contributor.avatar_url} alt={contributor.login} />
-          </a>
+          <Contributor {...contributor} />
         </li>
       ))}
     </ul>
@@ -18,10 +19,12 @@ const Contributors = props => {
 };
 
 Contributors.propTypes = {
+  className: PropTypes.string,
   contributors: PropTypes.arrayOf(PropTypes.shape()),
 };
 
 Contributors.defaultProps = {
+  className: '',
   contributors: [],
 };
 

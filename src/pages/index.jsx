@@ -22,6 +22,18 @@ const IndexPage = () => {
         allBooksJson {
           totalCount
         }
+        allContributors(
+          filter: { login: { nin: ["ben-eb", "marcobiedermann", "marhigh", "radibit", "stefanjudis"] } }
+        ) {
+          edges {
+            node {
+              id
+              avatar_url
+              html_url
+              login
+            }
+          }
+        }
         allCoursesJson {
           totalCount
         }
@@ -42,6 +54,7 @@ const IndexPage = () => {
     allArticlesJson: { totalCount: totalArticles },
     allAuditsJson: { totalCount: totalAudits },
     allBooksJson: { totalCount: totalBooks },
+    allContributors: { edges: contributors },
     allCoursesJson: { totalCount: totalCourses },
     allSlidesJson: { totalCount: totalSlides },
     allToolsJson: { totalCount: totalTools },
@@ -271,7 +284,7 @@ const IndexPage = () => {
       <Section>
         <Grid>
           <p>…with a little help from our friends</p>
-          <Contributors />
+          <Contributors contributors={contributors.map(contributor => contributor.node)} />
         </Grid>
       </Section>
       <Section>
