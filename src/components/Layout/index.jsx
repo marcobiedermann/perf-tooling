@@ -2,6 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as routes from '../../constants/routes';
+import LoveIcon from '../../images/icons/heart.svg';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
@@ -46,7 +47,10 @@ const Layout = ({ children }) => {
         <Main>{children}</Main>
         <Footer>
           <Grid>
-            © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <p>
+              Handcrafted with <LoveIcon width="1.5em" height="1.5em" fill="#ff4136" /> in Germany
+            </p>
+            <p>The Perf Tooling Team</p>
           </Grid>
         </Footer>
       </div>
