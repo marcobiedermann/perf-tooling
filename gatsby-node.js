@@ -17,6 +17,37 @@ const twit = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
+async function getSlideshareMeta(url) {
+  const response = await fetch(`http://www.slideshare.net/api/oembed/2?url=${url}&format=json`);
+
+  if (response.status !== 200) {
+    throw new Error('Slide not found');
+  }
+
+  const result = await response.json();
+
+  return {
+    image: result.thumbnail_url,
+  };
+}
+
+async function getSpeakerdeckMeta(url) {
+  const response = await fetch(`https://speakerdeck.com/oembed.json?url=${url}`);
+
+  if (response.status !== 200) {
+    throw new Error('Slide not found');
+  }
+
+  const result = await response.json();
+
+  const { html } = result;
+  const id = /speakerdeck.com\/player\/(.*?)"/g.exec(html)[1];
+
+  return {
+    image: `https://speakerd.s3.amazonaws.com/presentations/${id}/thumb_slide_0.jpg`,
+  };
+}
+
 async function getTwitterUser(id) {
   const { data } = await twit.get('/users/show/:id', {
     id,
@@ -60,6 +91,41 @@ exports.onCreateNode = async ({ node, actions }) => {
       node,
       value: twitterUsers,
     });
+  }
+
+  if (node.internal.type === 'SlidesJson') {
+    const { url } = node;
+
+    const isSlideshareUrl = url.match(/slideshare/g);
+    const isSpeakerdeckUrl = url.match(/speakerdeck/g);
+
+    if (isSlideshareUrl) {
+      try {
+        const slideMeta = await getSlideshareMeta(url);
+
+        createNodeField({
+          name: 'slideMeta',
+          node,
+          value: slideMeta,
+        });
+      } catch (error) {
+        console.error(error, { node });
+      }
+    }
+
+    if (isSpeakerdeckUrl) {
+      try {
+        const slideMeta = await getSpeakerdeckMeta(url);
+
+        createNodeField({
+          name: 'slideMeta',
+          node,
+          value: slideMeta,
+        });
+      } catch (error) {
+        console.error(error, { node });
+      }
+    }
   }
 };
 
