@@ -1,5 +1,5 @@
-const crypto = require('crypto');
 const dotenv = require('dotenv');
+const { createContentDigest } = require('gatsby-core-utils');
 const merge = require('lodash/merge');
 const fetch = require('node-fetch');
 const parseGithubUrl = require('parse-github-url');
@@ -149,10 +149,7 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
       children: [],
     };
 
-    const contentDigest = crypto
-      .createHash(`md5`)
-      .update(JSON.stringify(contributorNode))
-      .digest(`hex`);
+    const contentDigest = createContentDigest(contributorNode);
 
     contributorNode.internal.contentDigest = contentDigest;
 
