@@ -4,6 +4,7 @@ const merge = require('lodash/merge');
 const fetch = require('node-fetch');
 const parseGithubUrl = require('parse-github-url');
 const Twit = require('twit');
+const { Vimeo } = require('vimeo');
 const pkg = require('./package.json');
 
 dotenv.config({
@@ -16,6 +17,8 @@ const twit = new Twit({
   access_token: process.env.TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
+
+const vimeo = new Vimeo(process.env.VIMEO_CLIENT_ID, process.env.VIMEO_CLIENT_SECRET, process.env.VIMEO_ACCESS_TOKEN);
 
 async function getSlideshareMeta(url) {
   const response = await fetch(`http://www.slideshare.net/api/oembed/2?url=${url}&format=json`);
@@ -66,6 +69,23 @@ async function getTwitterUser(id) {
   };
 
   return merge({}, defaults, options);
+}
+
+function getVimeoVideo(id) {
+  return new Promise((resolve, reject) => {
+    vimeo.request(
+      {
+        path: `/videos/${id}`,
+      },
+      (error, body) => {
+        if (error) {
+          reject(error);
+        }
+
+        resolve(body);
+      },
+    );
+  });
 }
 
 exports.onCreateNode = async ({ node, actions }) => {
@@ -125,6 +145,20 @@ exports.onCreateNode = async ({ node, actions }) => {
       } catch (error) {
         console.error(error, { node });
       }
+    }
+  }
+
+  if (node.internal.type === 'VideosJson') {
+    const { vimeoId } = node;
+
+    if (vimeoId) {
+      const video = await getVimeoVideo(vimeoId);
+
+      createNodeField({
+        name: 'video',
+        node,
+        value: video,
+      });
     }
   }
 };
