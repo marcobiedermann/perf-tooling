@@ -1,10 +1,14 @@
 const dotenv = require('dotenv');
+const pkg = require('../../package.json');
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 const config = {
+  repository: {
+    url: pkg.repository.url,
+  },
   github: {
     token: process.env.GITHUB_TOKEN,
   },

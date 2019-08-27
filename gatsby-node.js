@@ -1,9 +1,7 @@
 const { createContentDigest } = require('gatsby-core-utils');
 const isGithubUrl = require('is-github-url');
-const fetch = require('node-fetch');
-const parseGithubUrl = require('parse-github-url');
-const pkg = require('./package.json');
-const { getRepositoryStars } = require('./src/gateways/github');
+const config = require('./src/config');
+const { getRepositoryContributors, getRepositoryStars } = require('./src/gateways/github');
 const { getSlideshareMeta } = require('./src/gateways/slideshare');
 const { getSpeakerdeckMeta } = require('./src/gateways/speakerdeck');
 const { getTwitterUser } = require('./src/gateways/twitter');
@@ -136,27 +134,28 @@ exports.onCreateNode = async ({ node, actions }) => {
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
-  const { name, owner } = parseGithubUrl(pkg.repository.url);
+  try {
+    const contributors = await getRepositoryContributors(config.repository.url);
 
-  const response = await fetch(`https://api.github.com/repos/${owner}/${name}/contributors`);
-  const result = await response.json();
+    contributors.forEach(contributor => {
+      const contributorNode = {
+        ...contributor,
+        avatar_url: `${contributor.avatar_url}&s=40`,
+        id: `${contributor.id}`,
+        parent: `__SOURCE__`,
+        internal: {
+          type: `Contributors`,
+        },
+        children: [],
+      };
 
-  result.forEach(user => {
-    const contributorNode = {
-      ...user,
-      avatar_url: `${user.avatar_url}&s=40`,
-      id: `${user.id}`,
-      parent: `__SOURCE__`,
-      internal: {
-        type: `Contributors`,
-      },
-      children: [],
-    };
+      const contentDigest = createContentDigest(contributorNode);
 
-    const contentDigest = createContentDigest(contributorNode);
+      contributorNode.internal.contentDigest = contentDigest;
 
-    contributorNode.internal.contentDigest = contentDigest;
-
-    createNode(contributorNode);
-  });
+      createNode(contributorNode);
+    });
+  } catch (error) {
+    console.error(error);
+  }
 };
