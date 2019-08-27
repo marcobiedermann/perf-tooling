@@ -5,6 +5,7 @@ const fetch = require('node-fetch');
 const parseGithubUrl = require('parse-github-url');
 const Twit = require('twit');
 const { Vimeo } = require('vimeo');
+const youtubeApi = require('youtube-api');
 const pkg = require('./package.json');
 
 dotenv.config({
@@ -19,6 +20,11 @@ const twit = new Twit({
 });
 
 const vimeo = new Vimeo(process.env.VIMEO_CLIENT_ID, process.env.VIMEO_CLIENT_SECRET, process.env.VIMEO_ACCESS_TOKEN);
+
+youtubeApi.authenticate({
+  key: process.env.YOUTUBE_API_KEY,
+  type: 'key',
+});
 
 async function getSlideshareMeta(url) {
   const response = await fetch(`http://www.slideshare.net/api/oembed/2?url=${url}&format=json`);
@@ -88,6 +94,24 @@ function getVimeoVideo(id) {
   });
 }
 
+function getYoutubeVideo(id) {
+  return new Promise((resolve, reject) => {
+    youtubeApi.videos.list(
+      {
+        part: 'snippet,statistics',
+        id,
+      },
+      (error, data) => {
+        if (error) {
+          reject(error);
+        }
+
+        resolve(data);
+      },
+    );
+  });
+}
+
 exports.onCreateNode = async ({ node, actions }) => {
   const { createNodeField } = actions;
 
@@ -149,10 +173,20 @@ exports.onCreateNode = async ({ node, actions }) => {
   }
 
   if (node.internal.type === 'VideosJson') {
-    const { vimeoId } = node;
+    const { vimeoId, youtubeId } = node;
 
     if (vimeoId) {
       const video = await getVimeoVideo(vimeoId);
+
+      createNodeField({
+        name: 'video',
+        node,
+        value: video,
+      });
+    }
+
+    if (youtubeId) {
+      const video = await getYoutubeVideo(youtubeId);
 
       createNodeField({
         name: 'video',
