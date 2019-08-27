@@ -12,10 +12,10 @@ const { getYoutubeVideo } = require('./src/gateways/youtube');
 
 exports.onCreateNode = async ({ node, actions }) => {
   const { createNodeField } = actions;
-
+  const nodeType = node.internal.type;
   const nodeTypes = ['ArticlesJson', 'AuditsJson', 'BooksJson', 'CoursesJson', 'SlidesJson', 'VideosJson'];
 
-  if (nodeTypes.includes(node.internal.type)) {
+  if (nodeTypes.includes(nodeType)) {
     const { authors } = node;
 
     const twitterUsers = await Promise.all(
@@ -35,7 +35,7 @@ exports.onCreateNode = async ({ node, actions }) => {
     });
   }
 
-  if (node.internal.type === 'SlidesJson') {
+  if (nodeType === 'SlidesJson') {
     const { url } = node;
 
     const isSlideshareUrl = url.match(/slideshare/g);
@@ -70,7 +70,7 @@ exports.onCreateNode = async ({ node, actions }) => {
     }
   }
 
-  if (node.internal.type === 'ToolsJson') {
+  if (nodeType === 'ToolsJson') {
     const { resources } = node;
 
     await Promise.all(
@@ -96,7 +96,7 @@ exports.onCreateNode = async ({ node, actions }) => {
     );
   }
 
-  if (node.internal.type === 'VideosJson') {
+  if (nodeType === 'VideosJson') {
     const { vimeoId, youtubeId } = node;
 
     if (vimeoId) {
