@@ -1,138 +1,14 @@
 const { createContentDigest } = require('gatsby-core-utils');
-const { GraphQLClient } = require('graphql-request');
 const isGithubUrl = require('is-github-url');
-const merge = require('lodash/merge');
 const fetch = require('node-fetch');
 const parseGithubUrl = require('parse-github-url');
-const Twit = require('twit');
-const { Vimeo } = require('vimeo');
-const youtubeApi = require('youtube-api');
 const pkg = require('./package.json');
-const config = require('./src/config');
-
-const githubApiClient = new GraphQLClient('https://api.github.com/graphql', {
-  headers: {
-    authorization: `Bearer ${config.github.token}`,
-  },
-});
-
-const twit = new Twit({
-  consumer_key: config.twitter.consumerKey,
-  consumer_secret: config.twitter.consumerSecret,
-  access_token: config.twitter.accessToken,
-  access_token_secret: config.twitter.accessTokenSecret,
-});
-
-const vimeo = new Vimeo(config.vimeo.clientId, config.vimeo.clientSecret, config.vimeo.accessToken);
-
-youtubeApi.authenticate({
-  key: config.youtube.apiKey,
-  type: 'key',
-});
-
-async function getRepositoryStars(url) {
-  const { name, owner } = parseGithubUrl(url);
-
-  const result = await githubApiClient.request(`
-    query {
-      repository(name: "${name}", owner: "${owner}") {
-        stargazers {
-          totalCount
-        }
-      }
-    }
-  `);
-
-  const { totalCount: stars } = result.repository.stargazers;
-
-  return stars;
-}
-
-async function getSlideshareMeta(url) {
-  const response = await fetch(`http://www.slideshare.net/api/oembed/2?url=${url}&format=json`);
-
-  if (response.status !== 200) {
-    throw new Error('Slide not found');
-  }
-
-  const result = await response.json();
-
-  return {
-    image: result.thumbnail_url,
-  };
-}
-
-async function getSpeakerdeckMeta(url) {
-  const response = await fetch(`https://speakerdeck.com/oembed.json?url=${url}`);
-
-  if (response.status !== 200) {
-    throw new Error('Slide not found');
-  }
-
-  const result = await response.json();
-
-  const { html } = result;
-  const id = /speakerdeck.com\/player\/(.*?)"/g.exec(html)[1];
-
-  return {
-    image: `https://speakerd.s3.amazonaws.com/presentations/${id}/thumb_slide_0.jpg`,
-  };
-}
-
-async function getTwitterUser(id) {
-  const { data } = await twit.get('/users/show/:id', {
-    id,
-  });
-
-  const defaults = {
-    description: '',
-    followers: 0,
-    image: '',
-  };
-
-  const options = {
-    description: data.description,
-    followers: data.followers_count,
-    image: data.profile_image_url,
-  };
-
-  return merge({}, defaults, options);
-}
-
-function getVimeoVideo(id) {
-  return new Promise((resolve, reject) => {
-    vimeo.request(
-      {
-        path: `/videos/${id}`,
-      },
-      (error, body) => {
-        if (error) {
-          reject(error);
-        }
-
-        resolve(body);
-      },
-    );
-  });
-}
-
-function getYoutubeVideo(id) {
-  return new Promise((resolve, reject) => {
-    youtubeApi.videos.list(
-      {
-        part: 'snippet,statistics',
-        id,
-      },
-      (error, data) => {
-        if (error) {
-          reject(error);
-        }
-
-        resolve(data);
-      },
-    );
-  });
-}
+const { getRepositoryStars } = require('./src/gateways/github');
+const { getSlideshareMeta } = require('./src/gateways/slideshare');
+const { getSpeakerdeckMeta } = require('./src/gateways/speakerdeck');
+const { getTwitterUser } = require('./src/gateways/twitter');
+const { getVimeoVideo } = require('./src/gateways/vimeo');
+const { getYoutubeVideo } = require('./src/gateways/youtube');
 
 exports.onCreateNode = async ({ node, actions }) => {
   const { createNodeField } = actions;
