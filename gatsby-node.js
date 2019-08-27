@@ -18,21 +18,25 @@ exports.onCreateNode = async ({ node, actions }) => {
   if (nodeTypes.includes(nodeType)) {
     const { authors } = node;
 
-    const twitterUsers = await Promise.all(
-      authors
-        .filter(author => author.twitter)
-        .map(author => {
-          const { twitter: id } = author;
+    try {
+      const twitterUsers = await Promise.all(
+        authors
+          .filter(author => author.twitter)
+          .map(author => {
+            const { twitter: id } = author;
 
-          return getTwitterUser(id);
-        }),
-    );
+            return getTwitterUser(id);
+          }),
+      );
 
-    createNodeField({
-      name: 'twitterUsers',
-      node,
-      value: twitterUsers,
-    });
+      createNodeField({
+        name: 'twitterUsers',
+        node,
+        value: twitterUsers,
+      });
+    } catch (error) {
+      console.error(error, { node });
+    }
   }
 
   if (nodeType === 'SlidesJson') {
@@ -90,7 +94,7 @@ exports.onCreateNode = async ({ node, actions }) => {
             value: stars,
           });
         } catch (error) {
-          console.error(error);
+          console.error(error, { node });
         }
       }),
     );
@@ -100,23 +104,31 @@ exports.onCreateNode = async ({ node, actions }) => {
     const { vimeoId, youtubeId } = node;
 
     if (vimeoId) {
-      const video = await getVimeoVideo(vimeoId);
+      try {
+        const video = await getVimeoVideo(vimeoId);
 
-      createNodeField({
-        name: 'video',
-        node,
-        value: video,
-      });
+        createNodeField({
+          name: 'video',
+          node,
+          value: video,
+        });
+      } catch (error) {
+        console.log(error, { node });
+      }
     }
 
     if (youtubeId) {
-      const video = await getYoutubeVideo(youtubeId);
+      try {
+        const video = await getYoutubeVideo(youtubeId);
 
-      createNodeField({
-        name: 'video',
-        node,
-        value: video,
-      });
+        createNodeField({
+          name: 'video',
+          node,
+          value: video,
+        });
+      } catch (error) {
+        console.error(error, { node });
+      }
     }
   }
 };

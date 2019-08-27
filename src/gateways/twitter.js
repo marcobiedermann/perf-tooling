@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 
-const merge = require('lodash/merge');
 const Twit = require('twit');
 const config = require('../config');
 
@@ -16,19 +15,11 @@ async function getTwitterUser(id) {
     id,
   });
 
-  const defaults = {
-    description: '',
-    followers: 0,
-    image: '',
-  };
-
-  const options = {
+  return {
     description: data.description,
     followers: data.followers_count,
     image: data.profile_image_url,
   };
-
-  return merge({}, defaults, options);
 }
 
 module.exports = { getTwitterUser };

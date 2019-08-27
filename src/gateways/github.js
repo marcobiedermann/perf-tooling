@@ -13,7 +13,7 @@ const githubApiClient = new GraphQLClient('https://api.github.com/graphql', {
 async function getRepositoryStars(url) {
   const { name, owner } = parseGithubUrl(url);
 
-  const result = await githubApiClient.request(`
+  const { repository } = await githubApiClient.request(`
     query {
       repository(name: "${name}", owner: "${owner}") {
         stargazers {
@@ -23,9 +23,7 @@ async function getRepositoryStars(url) {
     }
   `);
 
-  const { totalCount: stars } = result.repository.stargazers;
-
-  return stars;
+  return repository.stargazers.totalCount;
 }
 
 module.exports = { getRepositoryStars };
