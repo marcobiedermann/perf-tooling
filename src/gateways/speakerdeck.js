@@ -17,4 +17,4 @@ async function getSpeakerdeckMeta(url) {
   };
 }
 
-export { getSpeakerdeckMeta };
+module.exports = { getSpeakerdeckMeta };

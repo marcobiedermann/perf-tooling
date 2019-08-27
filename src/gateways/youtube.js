@@ -26,4 +26,4 @@ function getYoutubeVideo(id) {
   });
 }
 
-export { getYoutubeVideo };
+module.exports = { getYoutubeVideo };

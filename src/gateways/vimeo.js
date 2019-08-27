@@ -22,4 +22,4 @@ function getVimeoVideo(id) {
   });
 }
 
-export { getVimeoVideo };
+module.exports = { getVimeoVideo };

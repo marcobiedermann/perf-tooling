@@ -14,4 +14,4 @@ async function getSlideshareMeta(url) {
   };
 }
 
-export { getSlideshareMeta };
+module.exports = { getSlideshareMeta };

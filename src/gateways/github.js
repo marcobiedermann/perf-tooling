@@ -28,4 +28,4 @@ async function getRepositoryStars(url) {
   return stars;
 }
 
-export { getRepositoryStars };
+module.exports = { getRepositoryStars };

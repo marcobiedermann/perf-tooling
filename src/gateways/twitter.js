@@ -31,4 +31,4 @@ async function getTwitterUser(id) {
   return merge({}, defaults, options);
 }
 
-export { getTwitterUser };
+module.exports = { getTwitterUser };
