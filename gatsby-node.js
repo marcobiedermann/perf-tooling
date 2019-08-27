@@ -33,7 +33,7 @@ exports.onCreateNode = async ({ node, actions }) => {
         value: twitterUsers,
       });
     } catch (error) {
-      console.error(error, { node });
+      console.error(error.message, { node });
     }
   }
 
@@ -53,7 +53,7 @@ exports.onCreateNode = async ({ node, actions }) => {
           value: slideMeta,
         });
       } catch (error) {
-        console.error(error, { node });
+        console.error(error.message, { node });
       }
     }
 
@@ -67,7 +67,7 @@ exports.onCreateNode = async ({ node, actions }) => {
           value: slideMeta,
         });
       } catch (error) {
-        console.error(error, { node });
+        console.error(error.message, { node });
       }
     }
   }
@@ -92,7 +92,7 @@ exports.onCreateNode = async ({ node, actions }) => {
             value: stars,
           });
         } catch (error) {
-          console.error(error, { node });
+          console.error(error.message, { node });
         }
       }),
     );
@@ -111,7 +111,7 @@ exports.onCreateNode = async ({ node, actions }) => {
           value: video,
         });
       } catch (error) {
-        console.log(error, { node });
+        console.log(error.message, { node });
       }
     }
 
@@ -125,7 +125,7 @@ exports.onCreateNode = async ({ node, actions }) => {
           value: video,
         });
       } catch (error) {
-        console.error(error, { node });
+        console.error(error.message, { node });
       }
     }
   }
@@ -156,6 +156,6 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
       createNode(contributorNode);
     });
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
   }
 };

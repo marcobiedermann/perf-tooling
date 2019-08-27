@@ -11,10 +11,12 @@ const githubApiClient = new GraphQLClient('https://api.github.com/graphql', {
   },
 });
 
-function getRepositoryContributors(url) {
+async function getRepositoryContributors(url) {
   const { name, owner } = parseGithubUrl(url);
 
-  return axios.get(`https://api.github.com/repos/${owner}/${name}/contributors`);
+  const { data } = await axios.get(`https://api.github.com/repos/${owner}/${name}/contributors`);
+
+  return data;
 }
 
 async function getRepositoryStars(url) {
