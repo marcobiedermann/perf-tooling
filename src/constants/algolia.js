@@ -1,4 +1,2 @@
-import config from '../config';
-
-export const ALGOLIA_APP_ID = config.algolia.appId;
-export const ALGOLIA_SEARCH_KEY = config.algolia.searchKey;
+export const ALGOLIA_APP_ID = process.env.GATSBY_ALGOLIA_APP_ID;
+export const ALGOLIA_SEARCH_KEY = process.env.GATSBY_ALGOLIA_SEARCH_KEY;
