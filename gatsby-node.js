@@ -1,4 +1,3 @@
-const dotenv = require('dotenv');
 const { createContentDigest } = require('gatsby-core-utils');
 const { GraphQLClient } = require('graphql-request');
 const isGithubUrl = require('is-github-url');
@@ -9,28 +8,25 @@ const Twit = require('twit');
 const { Vimeo } = require('vimeo');
 const youtubeApi = require('youtube-api');
 const pkg = require('./package.json');
-
-dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+const config = require('./src/config');
 
 const githubApiClient = new GraphQLClient('https://api.github.com/graphql', {
   headers: {
-    authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    authorization: `Bearer ${config.github.token}`,
   },
 });
 
 const twit = new Twit({
-  consumer_key: process.env.TWITTER_API_KEY,
-  consumer_secret: process.env.TWITTER_API_SECRET,
-  access_token: process.env.TWITTER_ACCESS_TOKEN,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+  consumer_key: config.twitter.consumerKey,
+  consumer_secret: config.twitter.consumerSecret,
+  access_token: config.twitter.accessToken,
+  access_token_secret: config.twitter.accessTokenSecret,
 });
 
-const vimeo = new Vimeo(process.env.VIMEO_CLIENT_ID, process.env.VIMEO_CLIENT_SECRET, process.env.VIMEO_ACCESS_TOKEN);
+const vimeo = new Vimeo(config.vimeo.clientId, config.vimeo.clientSecret, config.vimeo.accessToken);
 
 youtubeApi.authenticate({
-  key: process.env.YOUTUBE_API_KEY,
+  key: config.youtube.apiKey,
   type: 'key',
 });
 
