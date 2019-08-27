@@ -1,5 +1,7 @@
 const dotenv = require('dotenv');
 const { createContentDigest } = require('gatsby-core-utils');
+const { GraphQLClient } = require('graphql-request');
+const isGithubUrl = require('is-github-url');
 const merge = require('lodash/merge');
 const fetch = require('node-fetch');
 const parseGithubUrl = require('parse-github-url');
@@ -10,6 +12,12 @@ const pkg = require('./package.json');
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
+});
+
+const githubApiClient = new GraphQLClient('https://api.github.com/graphql', {
+  headers: {
+    authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+  },
 });
 
 const twit = new Twit({
@@ -25,6 +33,24 @@ youtubeApi.authenticate({
   key: process.env.YOUTUBE_API_KEY,
   type: 'key',
 });
+
+async function getRepositoryStars(url) {
+  const { name, owner } = parseGithubUrl(url);
+
+  const result = await githubApiClient.request(`
+    query {
+      repository(name: "${name}", owner: "${owner}") {
+        stargazers {
+          totalCount
+        }
+      }
+    }
+  `);
+
+  const { totalCount: stars } = result.repository.stargazers;
+
+  return stars;
+}
 
 async function getSlideshareMeta(url) {
   const response = await fetch(`http://www.slideshare.net/api/oembed/2?url=${url}&format=json`);
@@ -170,6 +196,32 @@ exports.onCreateNode = async ({ node, actions }) => {
         console.error(error, { node });
       }
     }
+  }
+
+  if (node.internal.type === 'ToolsJson') {
+    const { resources } = node;
+
+    await Promise.all(
+      Object.keys(resources).map(async key => {
+        const resource = resources[key];
+
+        if (!isGithubUrl(resource.url)) {
+          return;
+        }
+
+        try {
+          const stars = await getRepositoryStars(resource.url);
+
+          createNodeField({
+            name: `${key}Stars`,
+            node,
+            value: stars,
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      }),
+    );
   }
 
   if (node.internal.type === 'VideosJson') {

@@ -21,6 +21,8 @@
     "gatsby-source-graphql": "^2.1.5",
     "gatsby-transformer-json": "^2.2.2",
     "gatsby-transformer-sharp": "^2.2.6",
+    "graphql-request": "^1.8.2",
+    "is-github-url": "^1.2.2",
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "parse-github-url": "^1.0.2",
