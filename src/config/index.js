@@ -9,6 +9,11 @@ const config = {
   repository: {
     url: pkg.repository.url,
   },
+  algolia: {
+    adminKey: process.env.ALGOLIA_ADMIN_KEY,
+    appId: process.env.GATSBY_ALGOLIA_APP_ID,
+    searchKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,
+  },
   github: {
     token: process.env.GITHUB_TOKEN,
   },

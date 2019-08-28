@@ -1,4 +1,51 @@
 const config = require('./src/config');
+const { getArticles } = require('./src/graphql/articles');
+const { getAudits } = require('./src/graphql/audits');
+const { getBooks } = require('./src/graphql/books');
+const { getCourses } = require('./src/graphql/courses');
+const { getSlides } = require('./src/graphql/slides');
+const { getTools } = require('./src/graphql/tools');
+const { getVideos } = require('./src/graphql/videos');
+
+const mapper = arr => arr.map(({ node }) => node);
+
+const queries = [
+  {
+    indexName: 'articles',
+    query: getArticles,
+    transformer: ({ data }) => mapper(data.articles.edges),
+  },
+  {
+    indexName: 'audits',
+    query: getAudits,
+    transformer: ({ data }) => mapper(data.audits.edges),
+  },
+  {
+    indexName: 'books',
+    query: getBooks,
+    transformer: ({ data }) => mapper(data.books.edges),
+  },
+  {
+    indexName: 'courses',
+    query: getCourses,
+    transformer: ({ data }) => mapper(data.courses.edges),
+  },
+  {
+    indexName: 'slides',
+    query: getSlides,
+    transformer: ({ data }) => mapper(data.slides.edges),
+  },
+  {
+    indexName: 'tools',
+    query: getTools,
+    transformer: ({ data }) => mapper(data.tools.edges),
+  },
+  {
+    indexName: 'videos',
+    query: getVideos,
+    transformer: ({ data }) => mapper(data.videos.edges),
+  },
+];
 
 module.exports = {
   siteMetadata: {
@@ -9,6 +56,14 @@ module.exports = {
     siteUrl: 'http://www.perf-tooling.today',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: config.algolia.appId,
+        apiKey: config.algolia.adminKey,
+        queries,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
