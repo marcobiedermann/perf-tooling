@@ -9,40 +9,51 @@ const { getVideos } = require('./src/graphql/videos');
 
 const mapper = arr => arr.map(({ node }) => node);
 
+const settings = {
+  hitsPerPage: 1000,
+};
+
 const queries = [
   {
     indexName: 'articles',
     query: getArticles,
+    settings,
     transformer: ({ data }) => mapper(data.articles.edges),
   },
   {
     indexName: 'audits',
     query: getAudits,
+    settings,
     transformer: ({ data }) => mapper(data.audits.edges),
   },
   {
     indexName: 'books',
     query: getBooks,
+    settings,
     transformer: ({ data }) => mapper(data.books.edges),
   },
   {
     indexName: 'courses',
     query: getCourses,
+    settings,
     transformer: ({ data }) => mapper(data.courses.edges),
   },
   {
     indexName: 'slides',
     query: getSlides,
+    settings,
     transformer: ({ data }) => mapper(data.slides.edges),
   },
   {
     indexName: 'tools',
     query: getTools,
+    settings,
     transformer: ({ data }) => mapper(data.tools.edges),
   },
   {
     indexName: 'videos',
     query: getVideos,
+    settings,
     transformer: ({ data }) => mapper(data.videos.edges),
   },
 ];
