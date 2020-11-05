@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         <Grid>
           <h1>
             <Link to="/">
-              <img src="images/perf-tooling.svg" alt={data.site.siteMetadata.title} width="64" height="43" />
+              <img src="/images/perf-tooling.svg" alt={data.site.siteMetadata.title} width="64" height="43" />
             </Link>
           </h1>
           <Navigation
