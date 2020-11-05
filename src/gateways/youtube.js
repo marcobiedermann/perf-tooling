@@ -12,15 +12,22 @@ function getYoutubeVideo(id) {
   return new Promise((resolve, reject) => {
     youtubeApi.videos.list(
       {
-        part: 'snippet,statistics',
         id,
+        part: 'snippet,statistics',
       },
-      (error, data) => {
+      (error, video) => {
         if (error) {
           reject(error);
         }
 
-        resolve(data);
+        resolve({
+          img: video.items[0].snippet.thumbnails.medium.url,
+          stats: {
+            dislikes: parseInt(video.items[0].statistics.dislikeCount, 10),
+            likes: parseInt(video.items[0].statistics.likeCount, 10),
+            views: parseInt(video.items[0].statistics.viewCount, 10),
+          },
+        });
       },
     );
   });

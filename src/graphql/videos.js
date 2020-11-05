@@ -6,6 +6,14 @@ const getVideos = `{
           name
           twitter
         }
+        fields {
+          img
+          stats {
+            dislikes
+            likes
+            views
+          }
+        }
         id
         name
         tags

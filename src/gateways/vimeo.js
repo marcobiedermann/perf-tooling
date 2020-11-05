@@ -11,12 +11,18 @@ function getVimeoVideo(id) {
       {
         path: `/videos/${id}`,
       },
-      (error, body) => {
+      (error, video) => {
         if (error) {
           reject(error);
         }
 
-        resolve(body);
+        resolve({
+          img: video.pictures.sizes[2].link,
+          stats: {
+            likes: video.metadata.connections.likes.total,
+            views: video.stats.plays,
+          },
+        });
       },
     );
   });

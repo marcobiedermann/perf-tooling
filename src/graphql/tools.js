@@ -4,6 +4,28 @@ const getTools = `{
       node {
         description
         id
+        fields {
+          stars {
+            angular
+            bookmarklet
+            broccoli
+            chrome
+            cli
+            googleAppsScript
+            grunt
+            gulp
+            javascript
+            linux
+            mac
+            nginx
+            node
+            php
+            python
+            ruby
+            service
+            wordpress
+          }
+        }
         name
         resources {
           angular {

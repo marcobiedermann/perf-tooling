@@ -17,8 +17,10 @@ async function getTwitterUser(id) {
 
   return {
     description: data.description,
-    followers: data.followers_count,
-    image: data.profile_image_url,
+    img: data.profile_image_url,
+    stats: {
+      followers: data.followers_count,
+    },
   };
 }
 

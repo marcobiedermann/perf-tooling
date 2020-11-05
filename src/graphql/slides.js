@@ -7,6 +7,9 @@ const getSlides = `{
           twitter
         }
         date
+        fields {
+          img
+        }
         id
         name
         stats {

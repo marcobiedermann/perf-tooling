@@ -2,13 +2,14 @@
 
 const axios = require('axios');
 
-async function getSpeakerdeckMeta(url) {
+async function getSpeakerdeckSlide(url) {
   const { data } = await axios.get(`https://speakerdeck.com/oembed.json?url=${url}`);
   const id = /speakerdeck.com\/player\/(.*?)"/g.exec(data.html)[1];
+  const img = `https://speakerd.s3.amazonaws.com/presentations/${id}/thumb_slide_0.jpg`;
 
   return {
-    image: `https://speakerd.s3.amazonaws.com/presentations/${id}/thumb_slide_0.jpg`,
+    img,
   };
 }
 
-module.exports = { getSpeakerdeckMeta };
+module.exports = { getSpeakerdeckSlide };

@@ -6,16 +6,28 @@ import MediaObject from '../MediaObject';
 import Tags from '../Tags';
 
 const Video = props => {
-  const { authors, name, tags, vimeoId, youtubeId } = props;
+  const {
+    authors,
+    name,
+    fields: { img, stats },
+    tags,
+    vimeoId,
+    youtubeId,
+  } = props;
 
   return (
     <div>
       <Media>
         <MediaObject>
           <figure>
+            {vimeoId && (
+              <a href={`https://vimeo.com/${vimeoId}`}>
+                <img src={img} alt={name} width="295" height="166" />
+              </a>
+            )}
             {youtubeId && (
               <a href={`https://youtube.com/watch?${youtubeId}`}>
-                <img src={`https://i.ytimg.com/vi/${youtubeId}/mqdefault.jpg`} alt={name} />
+                <img src={img} alt={name} width="295" height="166" />
               </a>
             )}
           </figure>
@@ -31,6 +43,13 @@ const Video = props => {
               <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
             ))}
           </h4>
+          {stats && (
+            <ul>
+              {stats.views && <li>Views: {stats.views}</li>}
+              {stats.likes && <li>Likes: {stats.likes}</li>}
+              {stats.dislikes && <li>Dislikes: {stats.dislikes}</li>}
+            </ul>
+          )}
           <Tags tags={tags} />
         </MediaBody>
       </Media>

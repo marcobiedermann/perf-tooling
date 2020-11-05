@@ -2,8 +2,8 @@ const { createContentDigest } = require('gatsby-core-utils');
 const isGithubUrl = require('is-github-url');
 const config = require('./src/config');
 const { getRepositoryContributors, getRepositoryStars } = require('./src/gateways/github');
-const { getSlideshareMeta } = require('./src/gateways/slideshare');
-const { getSpeakerdeckMeta } = require('./src/gateways/speakerdeck');
+const { getSlideshareSlide } = require('./src/gateways/slideshare');
+const { getSpeakerdeckSlide } = require('./src/gateways/speakerdeck');
 const { getTwitterUser } = require('./src/gateways/twitter');
 const { getVimeoVideo } = require('./src/gateways/vimeo');
 const { getYoutubeVideo } = require('./src/gateways/youtube');
@@ -11,9 +11,8 @@ const { getYoutubeVideo } = require('./src/gateways/youtube');
 exports.onCreateNode = async ({ node, actions }) => {
   const { createNodeField } = actions;
   const nodeType = node.internal.type;
-  const nodeTypes = ['ArticlesJson', 'AuditsJson', 'BooksJson', 'CoursesJson', 'SlidesJson', 'VideosJson'];
 
-  if (nodeTypes.includes(nodeType)) {
+  if (['ArticlesJson', 'AuditsJson', 'BooksJson', 'CoursesJson', 'SlidesJson', 'VideosJson'].includes(nodeType)) {
     const { authors } = node;
 
     try {
@@ -45,12 +44,12 @@ exports.onCreateNode = async ({ node, actions }) => {
 
     if (isSlideshareUrl) {
       try {
-        const slideMeta = await getSlideshareMeta(url);
+        const { img } = await getSlideshareSlide(url);
 
         createNodeField({
-          name: 'slideMeta',
+          name: 'img',
           node,
-          value: slideMeta,
+          value: img,
         });
       } catch (error) {
         console.error(error.message, { node });
@@ -59,12 +58,12 @@ exports.onCreateNode = async ({ node, actions }) => {
 
     if (isSpeakerdeckUrl) {
       try {
-        const slideMeta = await getSpeakerdeckMeta(url);
+        const { img } = await getSpeakerdeckSlide(url);
 
         createNodeField({
-          name: 'slideMeta',
+          name: 'img',
           node,
-          value: slideMeta,
+          value: img,
         });
       } catch (error) {
         console.error(error.message, { node });
@@ -84,12 +83,14 @@ exports.onCreateNode = async ({ node, actions }) => {
         }
 
         try {
-          const stars = await getRepositoryStars(resource.url);
+          const { stats } = await getRepositoryStars(resource.url);
 
           createNodeField({
-            name: `${key}Stars`,
+            name: 'stars',
             node,
-            value: stars,
+            value: {
+              [key]: stats.stars,
+            },
           });
         } catch (error) {
           console.error(error.message, { node });
@@ -103,12 +104,17 @@ exports.onCreateNode = async ({ node, actions }) => {
 
     if (vimeoId) {
       try {
-        const video = await getVimeoVideo(vimeoId);
+        const { img, stats } = await getVimeoVideo(vimeoId);
 
         createNodeField({
-          name: 'video',
+          name: 'img',
           node,
-          value: video,
+          value: img,
+        });
+        createNodeField({
+          name: 'stats',
+          node,
+          value: stats,
         });
       } catch (error) {
         console.log(error.message, { node });
@@ -117,12 +123,17 @@ exports.onCreateNode = async ({ node, actions }) => {
 
     if (youtubeId) {
       try {
-        const video = await getYoutubeVideo(youtubeId);
+        const { img, stats } = await getYoutubeVideo(youtubeId);
 
         createNodeField({
-          name: 'video',
+          name: 'img',
           node,
-          value: video,
+          value: img,
+        });
+        createNodeField({
+          name: 'stats',
+          node,
+          value: stats,
         });
       } catch (error) {
         console.error(error.message, { node });

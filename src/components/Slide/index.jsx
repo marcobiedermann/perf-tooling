@@ -6,12 +6,18 @@ import MediaObject from '../MediaObject';
 import Tags from '../Tags';
 
 const Slide = props => {
-  const { authors, date, name, stats, tags, url } = props;
+  const { authors, date, fields, name, stats, tags, url } = props;
 
   return (
     <div>
       <Media>
-        <MediaObject />
+        {fields && fields.img && (
+          <MediaObject>
+            <figure>
+              <img src={fields.img} width="170" heoght="127" />
+            </figure>
+          </MediaObject>
+        )}
         <MediaBody>
           <h3>
             <a href={url}>{name}</a>
@@ -38,6 +44,9 @@ Slide.propTypes = {
     }),
   ),
   date: PropTypes.string,
+  fields: PropTypes.shape({
+    img: PropTypes.string,
+  }),
   name: PropTypes.string,
   stats: PropTypes.shape({
     length: PropTypes.number,
@@ -49,6 +58,7 @@ Slide.propTypes = {
 Slide.defaultProps = {
   authors: [],
   date: '',
+  fields: null,
   name: '',
   stats: null,
   tags: [],

@@ -32,7 +32,11 @@ async function getRepositoryStars(url) {
     }
   `);
 
-  return repository.stargazers.totalCount;
+  return {
+    stats: {
+      stars: repository.stargazers.totalCount,
+    },
+  };
 }
 
 module.exports = { getRepositoryContributors, getRepositoryStars };
