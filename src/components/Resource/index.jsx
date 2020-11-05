@@ -27,6 +27,7 @@ import SafariIcon from '../../images/icons/safari.svg';
 import ServiceIcon from '../../images/icons/service.svg';
 import WindowsIcon from '../../images/icons/windows.svg';
 import WordpressIcon from '../../images/icons/wordpress.svg';
+import Tooltip from '../Tooltip';
 import styles from './style.module.css';
 
 const Resource = props => {
@@ -64,6 +65,7 @@ const Resource = props => {
       {id === 'service' && <ServiceIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'windows' && <WindowsIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'wordpress' && <WordpressIcon width="1.5em" height="1.5em" fill="#fff" />}
+      <Tooltip>{resources[id]}</Tooltip>
     </a>
   );
 };
