@@ -27,7 +27,6 @@
     "is-github-url": "^1.2.2",
     "lodash": "^4.17.20",
     "parse-github-url": "^1.0.2",
-    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
