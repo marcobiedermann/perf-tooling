@@ -9,7 +9,7 @@ export interface MediaObjectProps {
 }
 
 const MediaObject: FC<MediaObjectProps> = (props) => {
-  const { className, modifier, ...otherProps } = props;
+  const { className, modifier = 'left', ...otherProps } = props;
 
   return (
     <div
