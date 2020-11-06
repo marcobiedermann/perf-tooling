@@ -53,7 +53,9 @@ const Resource: FC<ResourceProps> = (props) => {
       {id === 'chrome' && <ChromeIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'cli' && <CliIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'firefox' && <FirefoxIcon width="1.5em" height="1.5em" fill="#fff" />}
-      {id === 'googleAppsScript' && <GoogleAppsScriptIcon width="1.5em" height="1.5em" fill="#fff" />}
+      {id === 'googleAppsScript' && (
+        <GoogleAppsScriptIcon width="1.5em" height="1.5em" fill="#fff" />
+      )}
       {id === 'grunt' && <GruntIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'gulp' && <GulpIcon width="1.5em" height="1.5em" fill="#fff" />}
       {id === 'illustrator' && <IllustratorIcon width="1.5em" height="1.5em" fill="#fff" />}

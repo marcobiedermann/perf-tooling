@@ -21,7 +21,11 @@ const Navigation: FC<NavigationProps> = (props) => {
       <ul className={styles.navigation__list}>
         {routes.map((route) => (
           <li key={route.path}>
-            <Link to={route.path} className={styles.navigation__link} activeClassName={styles.navigation__linkActive}>
+            <Link
+              to={route.path}
+              className={styles.navigation__link}
+              activeClassName={styles.navigation__linkActive}
+            >
               {route.name}
             </Link>
           </li>

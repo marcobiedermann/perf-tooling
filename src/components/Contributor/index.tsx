@@ -14,7 +14,12 @@ const Contributor: FC<ContributorProps> = (props) => {
   const { avatar_url, className, html_url, login } = props;
 
   return (
-    <a href={html_url} className={classNames(className, styles.contributor)} target="_blank" rel="noopener noreferrer">
+    <a
+      href={html_url}
+      className={classNames(className, styles.contributor)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={avatar_url} alt={login} width="40" height="40" />
     </a>
   );

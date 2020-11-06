@@ -1,6 +1,10 @@
 {
   "name": "Perf Audit of a Polymer App",
-  "targets": ["https://m.reddit.com", "https://patents.google.com", "http://www.polymer-project.org"],
+  "targets": [
+    "https://m.reddit.com",
+    "https://patents.google.com",
+    "http://www.polymer-project.org"
+  ],
   "authors": [
     {
       "name": "Paul Irish",

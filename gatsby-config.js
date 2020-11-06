@@ -7,7 +7,7 @@ const { getSlides } = require('./src/graphql/slides');
 const { getTools } = require('./src/graphql/tools');
 const { getVideos } = require('./src/graphql/videos');
 
-const mapper = arr => arr.map(({ node }) => node);
+const mapper = (arr) => arr.map(({ node }) => node);
 
 const settings = {
   hitsPerPage: 1000,

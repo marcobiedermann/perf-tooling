@@ -12,14 +12,18 @@ exports.onCreateNode = async ({ node, actions }) => {
   const { createNodeField } = actions;
   const nodeType = node.internal.type;
 
-  if (['ArticlesJson', 'AuditsJson', 'BooksJson', 'CoursesJson', 'SlidesJson', 'VideosJson'].includes(nodeType)) {
+  if (
+    ['ArticlesJson', 'AuditsJson', 'BooksJson', 'CoursesJson', 'SlidesJson', 'VideosJson'].includes(
+      nodeType,
+    )
+  ) {
     const { authors } = node;
 
     try {
       const twitterUsers = await Promise.all(
         authors
-          .filter(author => author.twitter)
-          .map(author => {
+          .filter((author) => author.twitter)
+          .map((author) => {
             const { twitter: id } = author;
 
             return getTwitterUser(id);
@@ -75,7 +79,7 @@ exports.onCreateNode = async ({ node, actions }) => {
     const { resources } = node;
 
     await Promise.all(
-      Object.keys(resources).map(async key => {
+      Object.keys(resources).map(async (key) => {
         const resource = resources[key];
 
         if (!isGithubUrl(resource.url)) {
@@ -148,7 +152,7 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
   try {
     const contributors = await getRepositoryContributors(config.repository.url);
 
-    contributors.forEach(contributor => {
+    contributors.forEach((contributor) => {
       const contributorNode = {
         ...contributor,
         avatar_url: `${contributor.avatar_url}&s=40`,

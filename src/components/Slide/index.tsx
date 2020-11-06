@@ -44,7 +44,13 @@ const Slide: FC<SlideProps> = (props) => {
           <h4>
             {date} by{' '}
             {authors.map((author) => (
-              <>{author.twitter ? <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a> : author.name}</>
+              <>
+                {author.twitter ? (
+                  <a href={`https://twitter.com/${author.twitter}`}>{author.name}</a>
+                ) : (
+                  author.name
+                )}
+              </>
             ))}
           </h4>
           <ul>{stats && <li>Length: {stats.length} Slides</li>}</ul>

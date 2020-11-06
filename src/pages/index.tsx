@@ -60,7 +60,9 @@ const IndexPage: FC<PageProps> = () => {
           totalCount
         }
         allContributors(
-          filter: { login: { nin: ["ben-eb", "marcobiedermann", "marhigh", "radibit", "stefanjudis"] } }
+          filter: {
+            login: { nin: ["ben-eb", "marcobiedermann", "marhigh", "radibit", "stefanjudis"] }
+          }
         ) {
           edges {
             node {
@@ -114,8 +116,8 @@ const IndexPage: FC<PageProps> = () => {
         <Grid>
           <h2>Automate. Monitor. Improve.</h2>
           <h3>
-            Perf-tooling is a collection of powerful resources which will help you to improve your workflow and to
-            deliver better and faster websites.
+            Perf-tooling is a collection of powerful resources which will help you to improve your
+            workflow and to deliver better and faster websites.
           </h3>
         </Grid>
       </Section>
@@ -125,8 +127,9 @@ const IndexPage: FC<PageProps> = () => {
             <Column columnSpan={6}>
               <h3>{totalTools} Tools</h3>
               <p>
-                A rich collection of tools available to optimize and/or monitor your website’s performance including
-                bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.
+                A rich collection of tools available to optimize and/or monitor your website’s
+                performance including bookmarklets, browser extensions, command line tools, node
+                modules and grunt/gulp tasks.
               </p>
               <p>
                 <Link to={routes.TOOLS.path}>Explore Tools</Link>
@@ -135,8 +138,8 @@ const IndexPage: FC<PageProps> = () => {
             <Column columnSpan={6}>
               <h3>{totalArticles} Articles</h3>
               <p>
-                An exclusive list of articles about best practices to build fast websites which will make your visitors
-                happy.
+                An exclusive list of articles about best practices to build fast websites which will
+                make your visitors happy.
               </p>
               <p>
                 <Link to={routes.ARTICLES.path}>Explore Articles</Link>
@@ -145,8 +148,8 @@ const IndexPage: FC<PageProps> = () => {
             <Column columnSpan={6}>
               <h3>{totalVideos} Videos</h3>
               <p>
-                A collection of recent videos including performance-specific tips and tricks to build better and faster
-                websites.
+                A collection of recent videos including performance-specific tips and tricks to
+                build better and faster websites.
               </p>
               <p>
                 <Link to={routes.VIDEOS.path}>Explore Videos</Link>
@@ -162,7 +165,8 @@ const IndexPage: FC<PageProps> = () => {
             <Column columnSpan={6}>
               <h3>{totalBooks} Books</h3>
               <p>
-                Our books section features recommended books from some of the most influential authors in the field.
+                Our books section features recommended books from some of the most influential
+                authors in the field.
               </p>
               <p>
                 <Link to={routes.BOOKS.path}>Explore Books</Link>
@@ -178,7 +182,8 @@ const IndexPage: FC<PageProps> = () => {
             <Column columnSpan={6}>
               <h3>{totalAudits} Audits</h3>
               <p>
-                Our books section features recommended books from some of the most influential authors in the field.
+                Our books section features recommended books from some of the most influential
+                authors in the field.
               </p>
               <p>
                 <Link to={routes.AUDITS.path}>Explore Audits</Link>
@@ -194,7 +199,12 @@ const IndexPage: FC<PageProps> = () => {
             You want to add a tool? Great!
             <br />
             Either{' '}
-            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
+            <a
+              href={bugs.url}
+              title="Link to repository issues"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               create an issue
             </a>{' '}
             and we’ll add it to perf-tooling.today.
@@ -209,7 +219,8 @@ const IndexPage: FC<PageProps> = () => {
             >
               data folder
             </a>
-            . The JSON files in these folders will be automatically rendered using a template based in the{' '}
+            . The JSON files in these folders will be automatically rendered using a template based
+            in the{' '}
             <a
               href="https://github.com/stefanjudis/perf-tooling/tree/master/templates"
               title="Link to templates folder"
@@ -230,17 +241,30 @@ const IndexPage: FC<PageProps> = () => {
             .
           </p>
           <p>
-            <em>By proposing a pull request you will be added to the footer contributors list automatically.</em>
+            <em>
+              By proposing a pull request you will be added to the footer contributors list
+              automatically.
+            </em>
           </p>
           <p>
-            We would like this project to become a shared resource maintained by the community, so if you have any ideas
-            on how to improve it or make it better, please let us know and{' '}
-            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
+            We would like this project to become a shared resource maintained by the community, so
+            if you have any ideas on how to improve it or make it better, please let us know and{' '}
+            <a
+              href={bugs.url}
+              title="Link to repository issues"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               file an issue on Github.
             </a>
           </p>
           <p>
-            <a href={bugs.url} title="Link to repository issues" target="_blank" rel="noopener noreferrer">
+            <a
+              href={bugs.url}
+              title="Link to repository issues"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Submit a resource
             </a>{' '}
             <a
@@ -313,7 +337,12 @@ const IndexPage: FC<PageProps> = () => {
         <Grid>
           <h4>Sponsored by</h4>
           <p>
-            <a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.fastly.com/"
+              title="Link to Fastly CDN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="images/fastly_grey.svg"
                 alt="Logo of CDN Fastly"
@@ -330,7 +359,12 @@ const IndexPage: FC<PageProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="images/calibre_grey.svg" alt="Logo of Calibre" width="180" className="center-block" />
+              <img
+                src="images/calibre_grey.svg"
+                alt="Logo of Calibre"
+                width="180"
+                className="center-block"
+              />
             </a>
           </p>
         </Grid>
