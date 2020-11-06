@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import Media from '../Media';
 import MediaBody from '../MediaBody';
 import MediaObject from '../MediaObject';
+import Stats from '../Stats';
 import Tags from '../Tags';
 
 interface Author {
@@ -54,7 +55,7 @@ const Book: FC<BookProps> = (props) => {
             ))}
           </h4>
           <p>{description}</p>
-          <ul>{stats && stats.length && <li>Length: {stats.length} Pages</li>}</ul>
+          <Stats stats={[`Length: ${stats.length} Pages`]} />
           <Tags tags={tags} />
         </MediaBody>
       </Media>

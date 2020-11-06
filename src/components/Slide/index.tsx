@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Media from '../Media';
 import MediaBody from '../MediaBody';
 import MediaObject from '../MediaObject';
+import Stats from '../Stats';
 import Tags from '../Tags';
 
 interface Author {
@@ -53,7 +54,7 @@ const Slide: FC<SlideProps> = (props) => {
               </>
             ))}
           </h4>
-          <ul>{stats && <li>Length: {stats.length} Slides</li>}</ul>
+          <Stats stats={[`Length: ${stats.length} Slides`]} />
           <Tags tags={tags} />
         </MediaBody>
       </Media>

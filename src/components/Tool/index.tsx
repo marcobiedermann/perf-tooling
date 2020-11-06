@@ -8,7 +8,7 @@ export interface ToolProps {
   className?: string;
   description: string;
   name: string;
-  objecId: string;
+  objectId: string;
   tags: TagsProps;
   resources: {
     angular?: {

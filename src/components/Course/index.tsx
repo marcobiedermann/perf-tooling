@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import Media from '../Media';
 import MediaBody from '../MediaBody';
 import MediaObject from '../MediaObject';
+import Stats from '../Stats';
 import Tags from '../Tags';
 
 interface Author {
@@ -57,10 +58,7 @@ const Course: FC<CourseProps> = (props) => {
               </>
             ))}
           </h4>
-          <ul>
-            {stats && stats.estimatedTime && <li>Length: {stats.estimatedTime}</li>}
-            {stats && stats.level && <li>Level: {stats.level}</li>}
-          </ul>
+          <Stats stats={[`Length: ${stats.estimatedTime}`, `Level: ${stats.level}`]} />
           <Tags tags={tags} />
         </MediaBody>
       </Media>

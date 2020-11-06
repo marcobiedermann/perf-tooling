@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Media from '../Media';
 import MediaBody from '../MediaBody';
 import MediaObject from '../MediaObject';
+import Stats from '../Stats';
 import Tags, { TagsProps } from '../Tags';
 
 interface Author {
@@ -70,13 +71,13 @@ const Video: FC<VideoProps> = (props) => {
               </>
             ))}
           </h4>
-          {stats && (
-            <ul>
-              {stats.views && <li>Views: {stats.views}</li>}
-              {stats.likes && <li>Likes: {stats.likes}</li>}
-              {stats.dislikes && <li>Dislikes: {stats.dislikes}</li>}
-            </ul>
-          )}
+          <Stats
+            stats={[
+              `Views: ${stats.views}`,
+              `Likes: ${stats.likes}`,
+              `Dislikes: ${stats.dislikes}`,
+            ]}
+          />
           <Tags tags={tags} />
         </MediaBody>
       </Media>
