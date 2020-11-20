@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Resources from '../Resources';
-import Tags, { TagsProps } from '../Tags';
+import Tags from '../Tags';
 import styles from './style.module.css';
 
 export interface ToolProps {
@@ -9,7 +9,7 @@ export interface ToolProps {
   description: string;
   name: string;
   objectId: string;
-  tags: TagsProps;
+  tags: string[];
   resources: {
     angular?: {
       url: string;

@@ -3,7 +3,7 @@ import Media from '../Media';
 import MediaBody from '../MediaBody';
 import MediaObject from '../MediaObject';
 import Stats from '../Stats';
-import Tags, { TagsProps } from '../Tags';
+import Tags from '../Tags';
 
 interface Author {
   name: string;
@@ -22,7 +22,7 @@ export interface VideoProps {
   };
   name: string;
   objectId: string;
-  tags: TagsProps;
+  tags: string[];
   vimeoId?: string;
   youtubeId?: string;
 }

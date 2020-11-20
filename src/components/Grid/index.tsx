@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
-const Grid = (props) => {
+const Grid: FC = (props) => {
   return <div className={styles.grid} {...props} />;
 };
 

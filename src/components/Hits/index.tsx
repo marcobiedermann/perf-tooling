@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Articles from '../Articles';
 import Audits from '../Audits';
 import Books from '../Books';
@@ -12,7 +12,7 @@ export interface HitsProps {
   indexName: string;
 }
 
-const Hits = (props) => {
+const Hits: FC<HitsProps> = (props) => {
   const { hits, indexName } = props;
 
   switch (indexName) {
