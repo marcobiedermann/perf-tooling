@@ -25,7 +25,7 @@
     "gatsby-transformer-sharp": "^2.5.21",
     "graphql-request": "^3.3.0",
     "is-github-url": "^1.2.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "parse-github-url": "^1.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
